@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="File" load_steps=8 format=3 uid="uid://7wcwr2dtyinp"]
+
+[ext_resource type="Script" uid="uid://dk4vrjkokrtcv" path="res://Scripts/Items/FileItem.gd" id="1_780bo"]
+[ext_resource type="Texture2D" uid="uid://c7msoucui78qr" path="res://Assets/Resources/Items/Icons/entity-enc.png" id="1_y5704"]
+[ext_resource type="Texture2D" uid="uid://bju5rdevt1mhf" path="res://Assets/Resources/Items/Images/wanderer-picture.png" id="2_xjt0q"]
+[ext_resource type="Texture2D" uid="uid://b3p51dlpag4k4" path="res://Assets/Resources/Items/Images/watcher-picture.png" id="3_7hjhq"]
+[ext_resource type="Texture2D" uid="uid://dwwd3irrxjb4h" path="res://Assets/Resources/Items/Images/hans-picture.png" id="4_h2m24"]
+[ext_resource type="FontFile" uid="uid://coe6c71wdlh0v" path="res://Fonts/Times New Roman MT Std Condensed.otf" id="6_l20y0"]
+[ext_resource type="Texture2D" uid="uid://b66yqna4jndtc" path="res://Assets/Resources/Items/Images/entity-encyclopedia-1.png" id="7_4gvtu"]
+
+[resource]
+script = ExtResource("1_780bo")
+title = "Entities"
+text = "[b]Wanderer[/b]
+Class: [i]Hostile[/i]
+Population: [i]1[/i]
+
+The Wanderer is an entity that typically lurks around in search of a target. It is a very tall and thin creature (roughly 30ft tall), with long gangly arms. The Wanderer emits a sound that remembles television static.
+
+Extreme caution is advised if spotted due to a large number of fatalities associated with this entity.
+<page>
+
+
+[center][img=1024]res://Assets/Resources/Items/Images/wanderer-picture.png[/img][/center]
+<page>
+[b]Watcher[/b]
+Class: [i]Neutral[/i]
+Population: [i]???[/i]
+
+Watchers are entities that are comprised of two floating, disembodied eyes. There are no documented cases of two Watchers being seen at once, but it is roughly speculated that the population exceeds 500.
+
+Watchers dwell in dark areas, typically at a high altitude, although they are believed to hover at ground level on occasion. They enjoy playing 'staring contest'.
+<page>
+
+
+[center][img=1024]res://Assets/Resources/Items/Images/watcher-picture.png[/img][/center]
+<page>
+[b]Hans[/b]
+Class: [i]Friendly[/i]
+Population: [i]223[/i]
+
+\"Hans\", the unofficial name of this entity type, are disembodied pairs of hands that wander the realm in search of an opponent to play \"Rock, Paper, Scissors\" with. They are generally passive, non-violent creatures, but have been observed to get angry when beaten.
+
+They are known to \"talk with their hands\", and are very opinionated on various socio-economic issues.
+<page>
+
+
+[center][img=1024]res://Assets/Resources/Items/Images/hans-picture.png[/img][/center]"
+page_count = 2
+texture = ExtResource("7_4gvtu")
+special_font = ExtResource("6_l20y0")
+illustrations = Dictionary[int, Texture2D]({
+0: ExtResource("2_xjt0q"),
+1: ExtResource("3_7hjhq"),
+2: ExtResource("4_h2m24")
+})
+display_type = "Multi"
+name = "Entity Encyclopedia"
+type = 0
+usable = false
+combinable = false
+examinable = true
+description = "A handbook given to all who purchase OTHERDOMAIN. It's an encyclopedia of the kinds of \"entities\" I may encounter in here..."
+icon = ExtResource("1_y5704")
+metadata/_custom_type_script = "uid://dk4vrjkokrtcv"

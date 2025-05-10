@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PartialItem" load_steps=4 format=3 uid="uid://c4dv0g4m77vcu"]
+
+[ext_resource type="Texture2D" uid="uid://b1o1totsmx5jn" path="res://Assets/Resources/Items/Icons/mouse.png" id="1_hx4jg"]
+[ext_resource type="Script" uid="uid://cdpp0ff0v46nb" path="res://Scripts/Items/PartialItem.gd" id="1_j6kvq"]
+[ext_resource type="Resource" uid="uid://ppavwnk0crvc" path="res://Assets/Resources/Items/KeyboardAndMouse.tres" id="2_qele0"]
+
+[resource]
+script = ExtResource("1_j6kvq")
+combo_id = 653089743298
+result = ExtResource("2_qele0")
+name = "Computer Mouse"
+type = 3
+usable = false
+combinable = true
+examinable = false
+description = "An old school computer mouse. It doesn't even have a scroll wheel..."
+icon = ExtResource("1_hx4jg")
+metadata/_custom_type_script = "uid://cdpp0ff0v46nb"

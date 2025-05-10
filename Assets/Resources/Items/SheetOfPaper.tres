@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PartialItem" load_steps=4 format=3 uid="uid://fwmn44o3tc28"]
+
+[ext_resource type="Texture2D" uid="uid://debyb2w2stkow" path="res://Assets/Resources/Items/Icons/piece_of_paper.png" id="1_772bn"]
+[ext_resource type="Resource" uid="uid://lhp08opqfldt" path="res://Assets/Resources/Items/Scissors.tres" id="2_m0n6f"]
+[ext_resource type="Script" uid="uid://cdpp0ff0v46nb" path="res://Scripts/Items/PartialItem.gd" id="3_nk045"]
+
+[resource]
+script = ExtResource("3_nk045")
+combo_id = 77689000
+result = ExtResource("2_m0n6f")
+name = "Sheet of Paper"
+type = 3
+usable = true
+combinable = true
+examinable = false
+description = "A scrap with some writing on it. "
+icon = ExtResource("1_772bn")
+metadata/_custom_type_script = "uid://cdpp0ff0v46nb"

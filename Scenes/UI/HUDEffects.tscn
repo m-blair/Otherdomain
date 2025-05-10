@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqmes45snjpqi"]
+
+[ext_resource type="Script" uid="uid://dgg5e4cd456ng" path="res://Scenes/UI/HUDEffects.gd" id="1_0c4j1"]
+
+[node name="HUDEffects" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0c4j1")
+metadata/_custom_type_script = "uid://d28o4yhdvnm52"
+
+[node name="Shade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
+
+[connection signal="fade_in" from="." to="." method="_on_fade_in"]
+[connection signal="fade_out" from="." to="." method="_on_fade_out"]

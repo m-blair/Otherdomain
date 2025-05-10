@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bag5wenefs3ft"]
+
+[ext_resource type="Texture2D" uid="uid://cmuqgwvpfi8dg" path="res://Assets/Sprites/Spritesheets/small-bush1.png" id="1_tcmtc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn7jt"]
+atlas = ExtResource("1_tcmtc")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr3fv"]
+atlas = ExtResource("1_tcmtc")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve7k2"]
+atlas = ExtResource("1_tcmtc")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijw54"]
+atlas = ExtResource("1_tcmtc")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfqf5"]
+atlas = ExtResource("1_tcmtc")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_heh7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn7jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr3fv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve7k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijw54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfqf5")
+}],
+"loop": true,
+"name": &"sway",
+"speed": 5.0
+}]
+
+[node name="FakeBush" type="AnimatedSprite3D"]
+sprite_frames = SubResource("SpriteFrames_heh7r")
+animation = &"sway"
+autoplay = "sway"
+frame_progress = 0.339625

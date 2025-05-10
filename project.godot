@@ -1,0 +1,140 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="OTHERDOMAIN"
+config/version="1.0.1"
+config/tags=PackedStringArray("3d", "atmospheric", "exploration", "horror", "item_management")
+run/main_scene="uid://ctw3ob4yjsu1f"
+config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://Sounds/default_bus_layout.tres"
+
+[autoload]
+
+Debug="*res://Scripts/Debug.gd"
+Signals="*res://Scripts/PlayerSignals.gd"
+Global="*res://Scripts/Global.gd"
+GameState="*res://Scripts/GameState.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[debug]
+
+gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_local_constant=0
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
+
+[dialogue_manager]
+
+editor/wrap_long_lines=true
+runtime/state_autoload_shortcuts=["res://Scripts/GameState.gd", "res://Scripts/PlayerData.gd"]
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/size/initial_position_type=3
+window/size/initial_screen=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/icon_explorer/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Fonts/": "gray",
+"res://Scenes/": "green",
+"res://Scripts/": "orange",
+"res://Shaders/": "purple",
+"res://Sounds/": "yellow"
+}
+
+[global_group]
+
+Player="Use this to reference player in wacky places"
+Game=""
+
+[input]
+
+"strafe right"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+"move forward"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+"strafe left"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+"move backward"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+sprint={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+menu={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"DEBUG player reset"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194439,"key_label":0,"unicode":49,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Scripts/Dialogue/Watcher.dialogue", "res://Scripts/Dialogue/PyramidOfTruth.dialogue", "res://Scripts/Dialogue/Hands.dialogue", "res://Scripts/Dialogue/ObeliskOfLies.dialogue", "res://Scripts/Dialogue/InteractiveObjectsMisc.dialogue", "res://Scripts/Dialogue/Story.dialogue")
+
+[layer_names]
+
+3d_render/layer_2="Player"
+3d_render/layer_3="Interaction"
+3d_render/layer_4="World"
+3d_render/layer_5="Shadows"
+3d_render/layer_6="Entities"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="Objects"
+3d_physics/layer_4="World"
+3d_physics/layer_5="Entities"
+
+[plugins]
+
+icon_explorer/preview_size_exp=7.0
+
+[rendering]
+
+occlusion_culling/use_occlusion_culling=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cx0argrvlb75y"
+path="res://.godot/imported/PyramidOfTruth.dialogue-9be13f73ca9cc72e7d6d9ad85609681b.tres"
+
+[deps]
+
+source_file="res://Scripts/Dialogue/PyramidOfTruth.dialogue"
+dest_files=["res://.godot/imported/PyramidOfTruth.dialogue-9be13f73ca9cc72e7d6d9ad85609681b.tres"]
+
+[params]
+
+defaults=true

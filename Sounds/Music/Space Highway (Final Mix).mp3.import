@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtefk8xte2pom"
+path="res://.godot/imported/Space Highway (Final Mix).mp3-cc0a978f7f0d0285917367738ee2ead6.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music/Space Highway (Final Mix).mp3"
+dest_files=["res://.godot/imported/Space Highway (Final Mix).mp3-cc0a978f7f0d0285917367738ee2ead6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

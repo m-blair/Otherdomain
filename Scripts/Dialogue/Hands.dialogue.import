@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dq6f5g7y734ac"
+path="res://.godot/imported/Hands.dialogue-de32105efccedbb50a0544fbc36812a0.tres"
+
+[deps]
+
+source_file="res://Scripts/Dialogue/Hands.dialogue"
+dest_files=["res://.godot/imported/Hands.dialogue-de32105efccedbb50a0544fbc36812a0.tres"]
+
+[params]
+
+defaults=true

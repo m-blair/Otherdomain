@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://us1mwsjq4bll"
+path="res://.godot/imported/InteractiveObjectsMisc.dialogue-091a88881b7253955a83185935f09abe.tres"
+
+[deps]
+
+source_file="res://Scripts/Dialogue/InteractiveObjectsMisc.dialogue"
+dest_files=["res://.godot/imported/InteractiveObjectsMisc.dialogue-091a88881b7253955a83185935f09abe.tres"]
+
+[params]
+
+defaults=true

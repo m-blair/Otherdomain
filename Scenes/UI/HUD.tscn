@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://bg6qbwxfw3bwg"]
+
+[ext_resource type="Script" uid="uid://dg6lhliu43v38" path="res://Scenes/UI/HUD.gd" id="1_omqfp"]
+[ext_resource type="PackedScene" uid="uid://t8p677cyo44j" path="res://Scenes/UI/Crosshair.tscn" id="2_1ree7"]
+[ext_resource type="PackedScene" uid="uid://bkd4kfjswru31" path="res://Scenes/UI/MENU.tscn" id="2_qc5w2"]
+[ext_resource type="PackedScene" uid="uid://dq4emu8rjkdph" path="res://Scenes/UI/DocReader.tscn" id="4_lelo4"]
+[ext_resource type="PackedScene" uid="uid://dys50oa6drl0v" path="res://Scenes/UI/ControlPopup.tscn" id="6_d2sja"]
+[ext_resource type="PackedScene" uid="uid://bvsjpic2gn705" path="res://Scenes/UI/VendingMachineUI.tscn" id="7_1ree7"]
+[ext_resource type="PackedScene" uid="uid://ps2h1m4qn3i0" path="res://Scenes/UI/NameTextBox.tscn" id="8_d2sja"]
+[ext_resource type="PackedScene" uid="uid://cqmes45snjpqi" path="res://Scenes/UI/HUDEffects.tscn" id="8_i4i0y"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_omqfp")
+metadata/_custom_type_script = "uid://dg6lhliu43v38"
+
+[node name="Crosshair" parent="." instance=ExtResource("2_1ree7")]
+z_index = -10
+position = Vector2(960, 540)
+
+[node name="MENU" parent="." instance=ExtResource("2_qc5w2")]
+ordering = "First"
+
+[node name="ControlPopup" parent="." instance=ExtResource("6_d2sja")]
+subscene_id = 1
+ordering = "Not Last"
+
+[node name="NameTextBox" parent="." instance=ExtResource("8_d2sja")]
+visible = false
+subscene_id = 2
+ordering = "Not Last"
+
+[node name="DocReader" parent="." instance=ExtResource("4_lelo4")]
+visible = false
+subscene_id = 3
+ordering = "Not Last"
+
+[node name="VendingMachineUI" parent="." instance=ExtResource("7_1ree7")]
+visible = false
+subscene_id = 5
+ordering = "Not Last"
+
+[node name="HUDEffects" parent="." instance=ExtResource("8_i4i0y")]
+visible = false
+subscene_id = 4
+ordering = "Last"
+
+[connection signal="item_pickup_request" from="." to="." method="_on_item_pickup_request"]
+[connection signal="show_vending_machine_ui" from="." to="." method="_on_show_vending_machine_ui"]
+[connection signal="doc_reader_open_request" from="MENU" to="." method="_on_menu_doc_reader_open_request"]
+[connection signal="item_use_attempt" from="MENU" to="." method="_on_item_used"]

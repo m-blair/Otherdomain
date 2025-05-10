@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Key" load_steps=3 format=3 uid="uid://dtaa3351sbqv0"]
+
+[ext_resource type="Texture2D" uid="uid://bbrjbnmoxp56d" path="res://Assets/Resources/Items/Icons/lockpick.png" id="1_dluhh"]
+[ext_resource type="Script" uid="uid://bwnu5dae75e0g" path="res://Scripts/Items/KeyItem.gd" id="1_yv8r8"]
+
+[resource]
+script = ExtResource("1_yv8r8")
+key_id = 4352356245
+name = "Lockpick"
+type = 2
+usable = true
+combinable = false
+examinable = false
+description = "Although a bit makeshift, I should be able to pick simple locks with this."
+icon = ExtResource("1_dluhh")
+metadata/_custom_type_script = "uid://bwnu5dae75e0g"

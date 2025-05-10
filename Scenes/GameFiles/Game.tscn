@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0pkje0nptroj"]
+
+[ext_resource type="Script" uid="uid://lgps27pvfaw5" path="res://Scenes/GameFiles/Game.gd" id="1_p5g0t"]
+[ext_resource type="PackedScene" uid="uid://uodfqe4wtnmu" path="res://Scenes/World/Hub.tscn" id="2_oahlc"]
+
+[node name="Game" type="Node3D" groups=["Game"]]
+script = ExtResource("1_p5g0t")
+
+[node name="Hub" parent="." instance=ExtResource("2_oahlc")]
+
+[connection signal="balance_changed" from="." to="." method="_on_balance_changed"]

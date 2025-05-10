@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="OtherItem" load_steps=3 format=3 uid="uid://ppavwnk0crvc"]
+
+[ext_resource type="Script" uid="uid://di11cgu2dqy6x" path="res://Scripts/Items/OtherItem.gd" id="1_0e827"]
+[ext_resource type="Texture2D" uid="uid://hx3b4poyiy12" path="res://Assets/Resources/Items/Icons/kb_mouse.png" id="1_23w8a"]
+
+[resource]
+script = ExtResource("1_0e827")
+equippable = false
+effect = "Give to OldMan"
+name = "Keyboard & Mouse"
+type = 5
+usable = true
+combinable = false
+examinable = false
+description = "An set of an old keyboard and computer mouse. They're both beige and very dated."
+icon = ExtResource("1_23w8a")
+metadata/_custom_type_script = "uid://di11cgu2dqy6x"

@@ -1,0 +1,15 @@
+
+~ VM_1
+% It's a vending machine.[wait=2].. what's this doing here? 
+=> END
+
+~ VM_RANDOM_ENCOUNTERS
+% It appears to be out of service...
+% Hm, looks like someone never took their drink... 
+=> END
+
+
+~ VM_OUT_OF_ORDER_1
+
+=> END
+

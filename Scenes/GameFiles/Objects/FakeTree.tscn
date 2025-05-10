@@ -1,0 +1,163 @@
+[gd_scene load_steps=25 format=3 uid="uid://bhb7ci484iiyt"]
+
+[ext_resource type="Texture2D" uid="uid://ikpnxd56qinu" path="res://Assets/Sprites/Spritesheets/sycamore-tree.png" id="1_6xjag"]
+[ext_resource type="Texture2D" uid="uid://dgr5ukcsm66yw" path="res://Assets/Sprites/Spritesheets/fir-tree.png" id="1_k1pn3"]
+[ext_resource type="Texture2D" uid="uid://botqp2rrlbe2f" path="res://Assets/Sprites/Spritesheets/maple-tree.png" id="2_ocpas"]
+[ext_resource type="Script" uid="uid://b3g0q7gue3keo" path="res://Scenes/GameFiles/Objects/FakeTree.gd" id="2_t628d"]
+[ext_resource type="Texture2D" uid="uid://54plfqwpg0io" path="res://Assets/Sprites/Spritesheets/pine-tree.png" id="3_hknw0"]
+[ext_resource type="Texture2D" uid="uid://bk050p1m85604" path="res://Assets/Sprites/Spritesheets/spruce-tree.png" id="4_iuwul"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61ec4"]
+atlas = ExtResource("1_k1pn3")
+region = Rect2(0, 0, 131, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs7sb"]
+atlas = ExtResource("1_k1pn3")
+region = Rect2(131, 0, 131, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b30c4"]
+atlas = ExtResource("1_k1pn3")
+region = Rect2(262, 0, 131, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gkk2"]
+atlas = ExtResource("2_ocpas")
+region = Rect2(0, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyoap"]
+atlas = ExtResource("2_ocpas")
+region = Rect2(160, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mtcv"]
+atlas = ExtResource("2_ocpas")
+region = Rect2(320, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w65fl"]
+atlas = ExtResource("2_ocpas")
+region = Rect2(480, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw3em"]
+atlas = ExtResource("3_hknw0")
+region = Rect2(0, 0, 134, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ioje"]
+atlas = ExtResource("3_hknw0")
+region = Rect2(134, 0, 134, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kms5k"]
+atlas = ExtResource("3_hknw0")
+region = Rect2(268, 0, 134, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqpph"]
+atlas = ExtResource("4_iuwul")
+region = Rect2(0, 0, 86, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yq7j"]
+atlas = ExtResource("4_iuwul")
+region = Rect2(86, 0, 86, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xqf7"]
+atlas = ExtResource("4_iuwul")
+region = Rect2(172, 0, 86, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t628d"]
+atlas = ExtResource("1_6xjag")
+region = Rect2(0, 0, 178, 186)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6sbs"]
+atlas = ExtResource("1_6xjag")
+region = Rect2(178, 0, 178, 186)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i17wg"]
+atlas = ExtResource("1_6xjag")
+region = Rect2(356, 0, 178, 186)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5boc"]
+atlas = ExtResource("1_6xjag")
+region = Rect2(534, 0, 178, 186)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1pn3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61ec4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs7sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b30c4")
+}],
+"loop": true,
+"name": &"Fir",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gkk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyoap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mtcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w65fl")
+}],
+"loop": true,
+"name": &"Maple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw3em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ioje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kms5k")
+}],
+"loop": true,
+"name": &"Pine",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqpph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yq7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xqf7")
+}],
+"loop": true,
+"name": &"Spruce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t628d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6sbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i17wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5boc")
+}],
+"loop": true,
+"name": &"Sycamore",
+"speed": 5.0
+}]
+
+[node name="FakeTree" type="AnimatedSprite3D"]
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_k1pn3")
+animation = &"Sycamore"
+autoplay = "Sycamore"
+frame_progress = 0.240526
+script = ExtResource("2_t628d")

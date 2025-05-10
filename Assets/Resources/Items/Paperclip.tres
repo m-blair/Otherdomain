@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PartialItem" load_steps=4 format=3 uid="uid://e3runq3gtk4k"]
+
+[ext_resource type="Script" uid="uid://cdpp0ff0v46nb" path="res://Scripts/Items/PartialItem.gd" id="1_3lnwg"]
+[ext_resource type="Texture2D" uid="uid://b01tv1hjjul0f" path="res://Assets/Resources/Items/Icons/paperclip.png" id="1_i5mwk"]
+[ext_resource type="Resource" uid="uid://dtaa3351sbqv0" path="res://Assets/Resources/Items/Lockpick.tres" id="2_e0nym"]
+
+[resource]
+script = ExtResource("1_3lnwg")
+combo_id = 111155
+result = ExtResource("2_e0nym")
+name = "Paperclip"
+type = 3
+usable = false
+combinable = true
+examinable = false
+description = "A standard paperclip."
+icon = ExtResource("1_i5mwk")
+metadata/_custom_type_script = "uid://cdpp0ff0v46nb"

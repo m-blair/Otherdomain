@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="OtherItem" load_steps=3 format=3 uid="uid://dp4v1werkudar"]
+
+[ext_resource type="Script" uid="uid://di11cgu2dqy6x" path="res://Scripts/Items/OtherItem.gd" id="1_exb51"]
+[ext_resource type="Texture2D" uid="uid://chwrv5ffkysfj" path="res://Assets/Resources/Items/Icons/rock.png" id="1_wdlys"]
+
+[resource]
+script = ExtResource("1_exb51")
+equippable = false
+effect = "Rock"
+name = "Rock"
+type = 5
+usable = true
+combinable = false
+examinable = true
+description = "It's a relatively small rock. That's pretty much it."
+icon = ExtResource("1_wdlys")
+metadata/_custom_type_script = "uid://di11cgu2dqy6x"

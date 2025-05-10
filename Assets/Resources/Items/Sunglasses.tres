@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="OtherItem" load_steps=3 format=3 uid="uid://cttxabufog868"]
+
+[ext_resource type="Script" uid="uid://di11cgu2dqy6x" path="res://Scripts/Items/OtherItem.gd" id="1_3lqnu"]
+[ext_resource type="Texture2D" uid="uid://dhk4oqrysi6pm" path="res://Assets/Resources/Items/Icons/sunglasses.png" id="1_v0m3q"]
+
+[resource]
+script = ExtResource("1_3lqnu")
+equippable = true
+effect = "Anti-Wanderer"
+name = "Sunglasses"
+type = 5
+usable = false
+combinable = false
+examinable = false
+description = "Some cool shades to block out the haters. I heard these protect you from the Wanderer somehow."
+icon = ExtResource("1_v0m3q")
+metadata/_custom_type_script = "uid://di11cgu2dqy6x"

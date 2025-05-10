@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=24 format=3 uid="uid://ckbf6j4vnyd27"]
+
+[ext_resource type="Script" uid="uid://dunawto0w5fc" path="res://Scripts/Items/Item.gd" id="1_uvqdc"]
+[ext_resource type="Resource" uid="uid://dicysp0p7qy25" path="res://Assets/Resources/Items/Ancient-Tome.tres" id="2_s5ub0"]
+[ext_resource type="Script" uid="uid://nfp5rrel52rn" path="res://Scripts/Items/Inventory.gd" id="2_uvp0p"]
+[ext_resource type="Resource" uid="uid://cg8np08edr3k1" path="res://Assets/Resources/Items/BugJuice.tres" id="3_gcwe2"]
+[ext_resource type="Resource" uid="uid://c4dv0g4m77vcu" path="res://Assets/Resources/Items/ComputerMouse.tres" id="4_f6qee"]
+[ext_resource type="Resource" uid="uid://7wcwr2dtyinp" path="res://Assets/Resources/Items/Entity-Encyclopedia.tres" id="5_ot4tk"]
+[ext_resource type="Resource" uid="uid://p6hiesnxunf4" path="res://Assets/Resources/Items/FizzyInvizzy.tres" id="6_dnn71"]
+[ext_resource type="Resource" uid="uid://c4vddnjeo7mjt" path="res://Assets/Resources/Items/Keyboard.tres" id="7_i73gk"]
+[ext_resource type="Resource" uid="uid://ppavwnk0crvc" path="res://Assets/Resources/Items/KeyboardAndMouse.tres" id="8_d1kg4"]
+[ext_resource type="Resource" uid="uid://dtaa3351sbqv0" path="res://Assets/Resources/Items/Lockpick.tres" id="9_nabw1"]
+[ext_resource type="Resource" uid="uid://tgy3naqm42uf" path="res://Assets/Resources/Items/OceanMist.tres" id="10_630m0"]
+[ext_resource type="Resource" uid="uid://i2ukb42ya2je" path="res://Assets/Resources/Items/Orenji.tres" id="11_hdoui"]
+[ext_resource type="Resource" uid="uid://e3runq3gtk4k" path="res://Assets/Resources/Items/Paperclip.tres" id="12_6cnpe"]
+[ext_resource type="Resource" uid="uid://bakop303pdk1v" path="res://Assets/Resources/Items/Pliers.tres" id="13_b52ox"]
+[ext_resource type="Resource" uid="uid://hiabc2r0tkba" path="res://Assets/Resources/Items/RazbeerCola.tres" id="14_8hdp4"]
+[ext_resource type="Resource" uid="uid://dp4v1werkudar" path="res://Assets/Resources/Items/Rock.tres" id="15_0rf0v"]
+[ext_resource type="Resource" uid="uid://lhp08opqfldt" path="res://Assets/Resources/Items/Scissors.tres" id="16_pywnx"]
+[ext_resource type="Resource" uid="uid://dyjtbmnemwlj6" path="res://Assets/Resources/Items/ScrapNote.tres" id="17_01ako"]
+[ext_resource type="Resource" uid="uid://fwmn44o3tc28" path="res://Assets/Resources/Items/SheetOfPaper.tres" id="18_b18at"]
+[ext_resource type="Resource" uid="uid://dddtx88tdq7ri" path="res://Assets/Resources/Items/Slop.tres" id="19_6vtge"]
+[ext_resource type="Resource" uid="uid://cttxabufog868" path="res://Assets/Resources/Items/Sunglasses.tres" id="20_jtunc"]
+[ext_resource type="Resource" uid="uid://cua4q3rqsrw71" path="res://Assets/Resources/Items/Wrench.tres" id="21_x87ea"]
+[ext_resource type="Resource" uid="uid://6vshyavdsvk2" path="res://Assets/Resources/Items/Xylowave.tres" id="22_vg0c0"]
+
+[resource]
+script = ExtResource("2_uvp0p")
+items = Array[ExtResource("1_uvqdc")]([ExtResource("2_s5ub0"), ExtResource("3_gcwe2"), ExtResource("4_f6qee"), ExtResource("5_ot4tk"), ExtResource("6_dnn71"), ExtResource("7_i73gk"), ExtResource("8_d1kg4"), ExtResource("9_nabw1"), ExtResource("10_630m0"), ExtResource("11_hdoui"), ExtResource("12_6cnpe"), ExtResource("13_b52ox"), ExtResource("14_8hdp4"), ExtResource("15_0rf0v"), ExtResource("16_pywnx"), ExtResource("17_01ako"), ExtResource("18_b18at"), ExtResource("19_6vtge"), ExtResource("20_jtunc"), ExtResource("21_x87ea"), ExtResource("22_vg0c0")])
+metadata/_custom_type_script = "uid://nfp5rrel52rn"

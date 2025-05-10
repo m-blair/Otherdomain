@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cnhvgibgl0chh"
+path="res://.godot/imported/Watcher.dialogue-6fd277910a4c4e00658d55d91673232e.tres"
+
+[deps]
+
+source_file="res://Scripts/Dialogue/Watcher.dialogue"
+dest_files=["res://.godot/imported/Watcher.dialogue-6fd277910a4c4e00658d55d91673232e.tres"]
+
+[params]
+
+defaults=true

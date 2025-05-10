@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="File" load_steps=6 format=3 uid="uid://dicysp0p7qy25"]
+
+[ext_resource type="Texture2D" uid="uid://bdadrnhamo2mg" path="res://Assets/Resources/Items/Icons/ancient_tome1.png" id="1_ikio5"]
+[ext_resource type="Script" uid="uid://dk4vrjkokrtcv" path="res://Scripts/Items/FileItem.gd" id="1_n1kiu"]
+[ext_resource type="Texture2D" uid="uid://bqxr7n0fwm076" path="res://Assets/Resources/Items/Images/ancient_book_illustration_1.png" id="2_jcd5n"]
+[ext_resource type="FontFile" uid="uid://bqhv0gtfdsgdt" path="res://Fonts/GotikAoe-VAz.ttf" id="3_jcd5n"]
+[ext_resource type="Texture2D" uid="uid://b6krh043yieht" path="res://Assets/Resources/Items/Images/ancient_tome.png" id="4_vkkxm"]
+
+[resource]
+script = ExtResource("1_n1kiu")
+title = "The God Cometh"
+text = "[code] The GORGE SHALL ONE DAY BE HOME TO A GATEWAY. THIS GATEWAY NAY EXISTS YET BUT ONE DAY IT WILL COME DUE TO THE CURSES OF THE PAST UPON THESE BLOODSTAINED LANDS. THIS GATEWAY WILL BRING DEATH, BLOOD, AND THE SINS OF THE DAMNED. [/code]
+<page>
+[code] BEHOLD THE POWER OF THE GREAT GATEWAY. WE SHALL CALL IT urdos. IT CONTAINS UN-TOLD POWER, AMONG THE LIKES OF WHICH MANKIND HATH NE'ER SEEN BEFORE[/code]
+<page>
+[code] uRDOS IS THOUGHT TO BRIDGE THE PHYSICAL REALM AND THE METAPHYSICAL. BELOW WHERE IT LAY, WILL EMERGE A POOL OF DISCHRAGE COATED A THICK BLACK. AS IT'S INFLENCE OVER THE PHYSCIAL WORLD GROWS, SO WILL THIS POOL. [/code]
+<page>
+[code] fOR THE PURPOSES OF RITUAL WORSHIP, WE CALL THIS POOL turgkhYZ. turgkhYZ IS A PLAGUE AMONG LIVING CREATURES. aLL THOSE WHOM ARE EXPOSED TO IT BECOME WILD, AND MURDEROUS WITH RAGE. THERE IS NO KNOWN CURE FOR ITS EFFECTS. IT IS BELIEVED THAT ANYONE WHO BECOMES AFFLICTED IS LOST ETERNALLY AND CANNOT RECOVER. PERHAPS OUR ANCESTORS WILL BE EQUIPPED TO HANDLE THE 
+OTHER WORLDLY NATURE OF urdos. [/code]
+<page>
+[code] URDOS IS THE GREAT EQUALIZER. URDOS SHALL BRING THE BEGINNING OF THE END URDOS WILL ERUPT UPON ITS LANDSCAPE TO BRING ETERNAL DEATH AND SUFFERING TO ALL CREATURES. THE ARRIVAL OF URDOS IS MARKED BY A FIERCELY GROWING FOG, FOLLOWED BY THE HEAVENS BLEEDING OVER, AND RUNNING OFF INTO NEARBY BODIES OF WATER. [/code]
+
+[code] THIS PREDICTION WILL HOLD TRUE. [/code]
+<page>
+[center][color=brown][outline_color=brown]There's an illustration here. What the [i]hell[/i] is it?[/outline_color][/color][/center]
+
+[center][img=350]res://Assets/Resources/Items/Images/ancient_book_illustration_1.png[/img][/center]"
+page_count = 6
+texture = ExtResource("4_vkkxm")
+special_font = ExtResource("3_jcd5n")
+illustrations = Dictionary[int, Texture2D]({
+5: ExtResource("2_jcd5n")
+})
+display_type = "Multi"
+name = "Ancient Tome"
+type = 0
+usable = false
+combinable = false
+examinable = true
+description = "An old script of some sort. I can't read what it says..."
+icon = ExtResource("1_ikio5")
+metadata/_custom_type_script = "uid://dk4vrjkokrtcv"

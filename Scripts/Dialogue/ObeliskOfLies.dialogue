@@ -1,0 +1,7 @@
+~ INTRODUCTION
+Obelisk Of Lies: Hello there- I am a Pyramid Of Truth, here to tell you the truth, and nothing but the truth! 
+
+do set_entity_met('Obelisk Of Lies')
+do set_dialogue_line_used('Obelisk Of Lies', 'INTRODUCTION')
+=> END
+

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bwyypcycpsdrp"
+path="res://.godot/imported/ObeliskOfLies.dialogue-6972dad9454b92370d25ea857cead00b.tres"
+
+[deps]
+
+source_file="res://Scripts/Dialogue/ObeliskOfLies.dialogue"
+dest_files=["res://.godot/imported/ObeliskOfLies.dialogue-6972dad9454b92370d25ea857cead00b.tres"]
+
+[params]
+
+defaults=true

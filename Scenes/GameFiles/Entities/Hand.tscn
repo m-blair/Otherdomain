@@ -1,0 +1,177 @@
+[gd_scene load_steps=13 format=3 uid="uid://cggqpve6gta0j"]
+
+[ext_resource type="Texture2D" uid="uid://diim33w6w2hcn" path="res://Assets/Sprites/Spritesheets/rps_hands1.png" id="1_e7v2v"]
+[ext_resource type="Script" uid="uid://de2yvg148gbei" path="res://Scenes/GameFiles/Entities/Hand.gd" id="2_fr1a6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rpmp"]
+atlas = ExtResource("1_e7v2v")
+region = Rect2(0, 1700, 899, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21fc6"]
+atlas = ExtResource("1_e7v2v")
+region = Rect2(899, 1700, 899, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83prj"]
+atlas = ExtResource("1_e7v2v")
+region = Rect2(0, 0, 899, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5myjx"]
+atlas = ExtResource("1_e7v2v")
+region = Rect2(899, 0, 899, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrbwf"]
+atlas = ExtResource("1_e7v2v")
+region = Rect2(0, 1275, 899, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vco2"]
+atlas = ExtResource("1_e7v2v")
+region = Rect2(899, 1275, 899, 425)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odebx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rpmp")
+}],
+"loop": true,
+"name": &"paper left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21fc6")
+}],
+"loop": true,
+"name": &"paper right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83prj")
+}],
+"loop": true,
+"name": &"rock left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5myjx")
+}],
+"loop": true,
+"name": &"rock right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrbwf")
+}],
+"loop": true,
+"name": &"scissors left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vco2")
+}],
+"loop": true,
+"name": &"scissors right",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_mcsh2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0crwj"]
+resource_name = "idle"
+length = 3.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.728738, 0.3562, 0), Vector3(-0.823968, 0.3562, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.261799), Vector3(0, 0, -2.98023e-08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1, 1, 1), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rixec"]
+_data = {
+&"RESET": SubResource("Animation_mcsh2"),
+&"idle": SubResource("Animation_0crwj")
+}
+
+[node name="Hand" type="AnimatedSprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705654, 0.363327, 0)
+sprite_frames = SubResource("SpriteFrames_odebx")
+animation = &"rock left"
+script = ExtResource("2_fr1a6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rixec")
+}

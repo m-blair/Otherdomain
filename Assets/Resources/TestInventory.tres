@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://btdevmef0uwwo"]
+
+[ext_resource type="Script" uid="uid://dunawto0w5fc" path="res://Scripts/Items/Item.gd" id="1_3br0n"]
+[ext_resource type="Script" uid="uid://nfp5rrel52rn" path="res://Scripts/Items/Inventory.gd" id="2_8jj8p"]
+[ext_resource type="Resource" uid="uid://7wcwr2dtyinp" path="res://Assets/Resources/Items/Entity-Encyclopedia.tres" id="3_k3t1l"]
+[ext_resource type="Resource" uid="uid://e3runq3gtk4k" path="res://Assets/Resources/Items/Paperclip.tres" id="4_md3qb"]
+[ext_resource type="Resource" uid="uid://p6hiesnxunf4" path="res://Assets/Resources/Items/FizzyInvizzy.tres" id="5_5vjfm"]
+[ext_resource type="Resource" uid="uid://dp4v1werkudar" path="res://Assets/Resources/Items/Rock.tres" id="9_d1qt1"]
+
+[resource]
+script = ExtResource("2_8jj8p")
+items = Array[ExtResource("1_3br0n")]([ExtResource("3_k3t1l"), ExtResource("4_md3qb"), ExtResource("5_5vjfm"), ExtResource("9_d1qt1")])
+metadata/_custom_type_script = "uid://nfp5rrel52rn"

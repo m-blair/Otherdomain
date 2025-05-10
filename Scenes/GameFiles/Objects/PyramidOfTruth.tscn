@@ -1,0 +1,346 @@
+[gd_scene load_steps=15 format=4 uid="uid://cauml7qrqbxsx"]
+
+[ext_resource type="Texture2D" uid="uid://byx0mycvv5my2" path="res://Assets/Textures/empty-texture-mc.png" id="1_38rc4"]
+[ext_resource type="Script" uid="uid://cjw0qx07xsamu" path="res://Scenes/GameFiles/Objects/PyramidOfTruth.gd" id="1_oryrn"]
+[ext_resource type="Texture2D" uid="uid://8qc7dbid54pf" path="res://Assets/Backgrounds/sky.png" id="3_48rwa"]
+[ext_resource type="FontFile" uid="uid://c78ixnxy8si7a" path="res://Fonts/M2-Regular.ttf" id="4_48rwa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ga52m"]
+albedo_texture = ExtResource("1_38rc4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j3tk1"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_ga52m"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAvwAAAL8AAAA/AAAAvwAAAL8AAAC/AAAAvwAAAD8AAAC/AAAAPwAAAL8AAAC/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAA/AAAAvwAAAD8AAAC/AAAAvwAAAL8AAAC/AAAAPwAAAL8AAAC/AAAAvwAAAD8AAAC/AAAAvwAAAD8AAAA/AAAAvwAAAL8AAAA/AAAAvwAAAL8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAvwAAAD8AAAC/AAAAvwAAAL8AAAA/AAAAPwAAAL8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAD8AAAA/AAAAPwAAAL8AAAA/AAAAvwAAAL8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAD8AAAC/AAAAvwAAAD8AAAC/AAAAvwAAAD8AAAC/AAAAPwAAAD8AAAC/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAC/AAAAPwAAAL8AAAC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7k30n"]
+data = PackedVector3Array(-0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsyx2"]
+albedo_texture = ExtResource("3_48rwa")
+emission_enabled = true
+emission = Color(0.133333, 0, 1, 1)
+emission_energy_multiplier = 0.46
+refraction_scale = -1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0duxs"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.285645, -0.5, 1, 0.571289, 1),
+"attribute_data": PackedByteArray("AAAAPwAAAAAAAEA/AAAAAAAAQD8AAIA/AAAAAAAAAAD///8+AAAAAAAAgD8AAAAAAACAPgAAAAAAAAA/AAAAAAAAAD8AAIA/AAAAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAABAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA+AAAAAAAAgD4AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_nsyx2"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AAAAvwBAkr4uvTuzLt7MMQBAkr4AAAC/AAAAAABAkj4AAAAAAAAAvwBAkr4uvTuzLr27sgBAkr4AAAA/AAAAPwBAkr4AAAAALr27sgBAkr4AAAA/AAAAvwBAkr4uvTuzAAAAAABAkj4AAAAALt7MMQBAkr4AAAC/AAAAvwBAkr4uvTuzAAAAPwBAkr4AAAAALt7MMQBAkr4AAAC/AAAAPwBAkr4AAAAAAAAAAABAkj4AAAAAAAAAPwBAkr4AAAAALr27sgBAkr4AAAA/AAAAAABAkj4AAAAAvTu8ux3fm/FBxP//Hd8rof9///////+f/38AAP///7//fwAA////v/9/AAD///+//3+8u+Eg0969O7y74SBijv9///8AAP+f/38AAP///7//fwAA////v/9/AAD///+/QcT//+Eg015BxLy74SBjDv9///8AAP9fQcS8uzhjb9D/f7y7pz2Or/9/////P/+/")
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l7ub0"]
+height = 2.83069
+radius = 1.66846
+
+[sub_resource type="Animation" id="Animation_48rwa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Platform:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Platform:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pyramid:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.22334, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pyramid:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.785398, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pyramid:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_oryrn"]
+resource_name = "idle"
+length = 8.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Platform:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Platform:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pyramid:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.22334, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pyramid:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.785398, 0), Vector3(0, 5.49779, 0), Vector3(0, -0.785398, 0), Vector3(0, 11.781, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pyramid:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(1.5, 1.5, 1.5), Vector3(2.5, 2.5, 2.5), Vector3(2, 2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_7k30n"]
+resource_name = "interact"
+length = 2.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Platform:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Platform:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pyramid:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.22334, 0), Vector3(0, 2.22334, 0), Vector3(0, 4.243, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pyramid:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.785398, 0), Vector3(0, -0.785398, 0), Vector3(0, 5.49779, 0), Vector3(0, 11.781, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pyramid:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7k30n"]
+_data = {
+&"RESET": SubResource("Animation_48rwa"),
+&"idle": SubResource("Animation_oryrn"),
+&"interact": SubResource("Animation_7k30n")
+}
+
+[node name="PyramidOfTruth" type="Node3D"]
+script = ExtResource("1_oryrn")
+
+[node name="Platform" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("ArrayMesh_j3tk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7k30n")
+
+[node name="Pyramid" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, 1.41421, 0, 2.22334, 0)
+mesh = SubResource("ArrayMesh_0duxs")
+
+[node name="PassiveDetectionZone" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PassiveDetectionZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41607, 0)
+shape = SubResource("CylinderShape3D_l7ub0")
+debug_color = Color(0, 0.623529, 0.72549, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20298, 0)
+light_energy = 4.0
+shadow_enabled = true
+distance_fade_enabled = true
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(2, 0, -3.57628e-07, 0, 2, 0, 3.57628e-07, 0, 2, -1.49012e-07, 2.22334, 0.745828)
+visible = false
+modulate = Color(0.820122, 0.388854, 0, 1)
+outline_modulate = Color(0.819608, 0.388235, 0, 1)
+text = "THE"
+font = ExtResource("4_48rwa")
+font_size = 77
+outline_size = 10
+
+[node name="Label3D2" type="Label3D" parent="."]
+transform = Transform3D(-2, 0, 5.96046e-07, 0, 2, 0, -5.96046e-07, 0, -2, 3.27826e-07, 2.22334, -0.756361)
+visible = false
+modulate = Color(0.820122, 0.388854, 0, 1)
+outline_modulate = Color(0.819608, 0.388235, 0, 1)
+text = "TRUTH"
+font = ExtResource("4_48rwa")
+font_size = 77
+outline_size = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7k30n")
+}
+
+[connection signal="body_entered" from="PassiveDetectionZone" to="." method="_on_passive_detection_zone_body_entered"]
+[connection signal="body_exited" from="PassiveDetectionZone" to="." method="_on_passive_detection_zone_body_exited"]

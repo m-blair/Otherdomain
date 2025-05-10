@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://r21rxt6g6sim"]
+
+[ext_resource type="Script" uid="uid://b5afk3tgbvjr7" path="res://Scenes/Tools/Stopwatch.gd" id="1_gjmko"]
+
+[node name="Stopwatch" type="Node"]
+script = ExtResource("1_gjmko")
+
+[connection signal="split" from="." to="." method="_on_split"]

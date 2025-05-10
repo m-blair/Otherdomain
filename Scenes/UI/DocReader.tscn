@@ -1,0 +1,1031 @@
+[gd_scene load_steps=43 format=3 uid="uid://dq4emu8rjkdph"]
+
+[ext_resource type="Script" uid="uid://bgroeyjlm2i83" path="res://Scenes/UI/DocReader.gd" id="1_l7wqv"]
+[ext_resource type="Shader" uid="uid://d34unmb37grye" path="res://Shaders/simple_blur.gdshader" id="2_0v53p"]
+[ext_resource type="Shader" uid="uid://ccxymbdboj6jv" path="res://Shaders/3d_hover.gdshader" id="2_8kmws"]
+[ext_resource type="Resource" uid="uid://7wcwr2dtyinp" path="res://Assets/Resources/Items/Entity-Encyclopedia.tres" id="2_oddu1"]
+[ext_resource type="FontFile" uid="uid://fkjry0jqs6no" path="res://Fonts/Swansea-q3pd.ttf" id="4_bb1sn"]
+[ext_resource type="Texture2D" uid="uid://b66yqna4jndtc" path="res://Assets/Resources/Items/Images/entity-encyclopedia-1.png" id="4_fxiev"]
+[ext_resource type="FontFile" uid="uid://b886puej5lvph" path="res://Fonts/SwanseaBold-D0ox.ttf" id="4_iacio"]
+[ext_resource type="FontFile" uid="uid://b4fhcqy8xh8sw" path="res://Fonts/SwanseaItalic-AwqD.ttf" id="5_ggikr"]
+[ext_resource type="Texture2D" uid="uid://cnkmwegccunxf" path="res://Assets/Sprites/cursor_right.png" id="6_n747p"]
+[ext_resource type="FontFile" uid="uid://bxh0yf8gqhjgx" path="res://Fonts/SwanseaBoldItalic-p3Dv.ttf" id="6_vn8x5"]
+[ext_resource type="AudioStream" uid="uid://cwv6amjvfrtca" path="res://Sounds/SFX/page_flip.wav" id="9_36svx"]
+[ext_resource type="Texture2D" uid="uid://b3k466kmjncsr" path="res://Assets/Sprites/cursor_left.png" id="10_3kcaj"]
+[ext_resource type="Texture2D" uid="uid://dv337wnv6um71" path="res://Assets/Icons/Arrow Right From Bracket.svg" id="11_56w3p"]
+[ext_resource type="Texture2D" uid="uid://bggsq6f61qjrc" path="res://Assets/Icons/Magnifying Glass.svg" id="13_j5wdt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fl0to"]
+shader = ExtResource("2_8kmws")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="Animation" id="Animation_ko3us"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DocumentTexture:material:shader")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_8kmws")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DocumentTexture:material:shader_parameter/fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [90.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DocumentTexture:material:shader_parameter/y_rot")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DocumentTexture:material:shader_parameter/x_rot")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DocumentTexture:material:shader_parameter/inset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../DocTitle:theme_override_colors/font_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.235294, 0.94902, 0.192157, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../DocTitle:theme_override_font_sizes/font_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [85]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../DocTitle:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../DocTitle:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../DocTitle:theme_override_fonts/font")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_vn8x5")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DocAnimator:speed_scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../DocTitle:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_oddu1"]
+resource_name = "flash"
+length = 5.0
+
+[sub_resource type="Animation" id="Animation_m1js3"]
+resource_name = "idle"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DocumentTexture:material:shader")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_8kmws")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DocumentTexture:material:shader_parameter/fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [90.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DocumentTexture:material:shader_parameter/y_rot")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DocumentTexture:material:shader_parameter/x_rot")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DocumentTexture:material:shader_parameter/inset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Resource" id="Resource_oddu1"]
+metadata/__load_path__ = "res://Fonts/ScaryMonsters-0v0G.ttf"
+
+[sub_resource type="Animation" id="Animation_60ile"]
+resource_name = "scary_monsters"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../DocTitle:theme_override_fonts/font")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("Resource_oddu1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../DocTitle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DocAnimator:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../DocTitle:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Resource" id="Resource_fxiev"]
+metadata/__load_path__ = "res://Fonts/SLNTHLE.TTF"
+
+[sub_resource type="Animation" id="Animation_qwet2"]
+resource_name = "silent_hell"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../DocTitle:theme_override_fonts/font")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("Resource_fxiev")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DocAnimator:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../DocTitle:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../DocTitle:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_co0ri"]
+resource_name = "psychodiseases_report"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../DocTitle:theme_override_fonts/font")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_vn8x5")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DocAnimator:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../DocTitle:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4fhg"]
+_data = {
+&"RESET": SubResource("Animation_ko3us"),
+&"flash": SubResource("Animation_oddu1"),
+&"idle": SubResource("Animation_m1js3"),
+&"scary_monsters": SubResource("Animation_60ile"),
+&"silent_hell": SubResource("Animation_qwet2"),
+&"swansea_bold_italic": SubResource("Animation_co0ri")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ttj7e"]
+shader = ExtResource("2_0v53p")
+shader_parameter/blur_amount = 9.5e-08
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7wsi"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7ybx"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fevd1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6dai0"]
+content_margin_left = 50.0
+content_margin_top = 50.0
+content_margin_right = 50.0
+content_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4h3lw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f57b7"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovds7"]
+bg_color = Color(0.0383972, 0.0383972, 0.0383971, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23pfm"]
+bg_color = Color(0.0823529, 0.337255, 0.0666667, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_imsi1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls68n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phrlm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdbmf"]
+
+[sub_resource type="Animation" id="Animation_43kwc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Document/DocumentTexture:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlurRect:material:shader_parameter/blur_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [9.5e-08]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlurRect:material:shader_parameter/mix_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlurRect:material:shader_parameter/color_over")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [null]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlurRect:material:shader")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0v53p")]
+}
+
+[sub_resource type="Animation" id="Animation_yg6rt"]
+resource_name = "blur"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Document/DocumentTexture:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlurRect:material:shader_parameter/blur_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.267943, 0.267943),
+"update": 0,
+"values": [9.5e-08, 3.329]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlurRect:material:shader_parameter/mix_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.267943, 0.267943),
+"update": 0,
+"values": [0.0, 0.635]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlurRect:material:shader_parameter/color_over")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.267943, 0.267943),
+"update": 0,
+"values": [null, null]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlurRect:material:shader")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(0.267943),
+"update": 1,
+"values": [ExtResource("2_0v53p")]
+}
+
+[sub_resource type="Animation" id="Animation_brgk5"]
+resource_name = "blurred"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Content:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Document/DocumentTexture:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlurRect:material:shader_parameter/blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.314]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlurRect:material:shader_parameter/mix_amount")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.671]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlurRect:material:shader_parameter/color_over")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [null]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BlurRect:material:shader")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0v53p")]
+}
+
+[sub_resource type="Animation" id="Animation_uiqcp"]
+resource_name = "unblurred"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Document/DocumentTexture:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlurRect:material:shader_parameter/blur_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [9.5e-08]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlurRect:material:shader_parameter/mix_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlurRect:material:shader_parameter/color_over")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [null]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlurRect:material:shader")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0v53p")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqn4d"]
+_data = {
+&"RESET": SubResource("Animation_43kwc"),
+&"blur": SubResource("Animation_yg6rt"),
+&"blurred": SubResource("Animation_brgk5"),
+&"unblurred": SubResource("Animation_uiqcp")
+}
+
+[node name="DocReader" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7wqv")
+current_document = ExtResource("2_oddu1")
+MODE = "SINGLE"
+metadata/_edit_lock_ = true
+
+[node name="BlackBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Document" type="Node2D" parent="."]
+position = Vector2(947, 544)
+rotation = 6.28319
+
+[node name="DocumentTexture" type="TextureRect" parent="Document"]
+material = SubResource("ShaderMaterial_fl0to")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -840.0
+offset_top = -540.0
+offset_right = 840.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(840, 540)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_fxiev")
+expand_mode = 1
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="FileButton" type="Button" parent="Document/DocumentTexture"]
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 403.0
+offset_top = 193.0
+offset_right = -447.0
+offset_bottom = -182.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="DocAnimator" type="AnimationPlayer" parent="Document"]
+libraries = {
+&"": SubResource("AnimationLibrary_w4fhg")
+}
+
+[node name="BlurRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ttj7e")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="DocTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.118519
+grow_horizontal = 2
+pivot_offset = Vector2(960, 64)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.235294, 0.94902, 0.192157, 1)
+theme_override_constants/line_spacing = 10
+theme_override_fonts/font = ExtResource("6_vn8x5")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d7wsi")
+text = "ENTITY ENCYCLOPEDIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+visible_characters_behavior = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DocPage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.1
+anchor_bottom = 0.118519
+grow_horizontal = 2
+pivot_offset = Vector2(960, 64)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.235294, 0.94902, 0.192157, 1)
+theme_override_fonts/font = ExtResource("5_ggikr")
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d7wsi")
+text = "1/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+visible_characters_behavior = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Content" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.118519
+anchor_right = 0.8
+anchor_bottom = 0.82963
+pivot_offset = Vector2(576, 384)
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_constants/line_separation = 18
+theme_override_fonts/normal_font = ExtResource("4_bb1sn")
+theme_override_fonts/italics_font = ExtResource("5_ggikr")
+theme_override_fonts/bold_italics_font = ExtResource("6_vn8x5")
+theme_override_fonts/bold_font = ExtResource("4_iacio")
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_n7ybx")
+bbcode_enabled = true
+scroll_active = false
+visible_characters_behavior = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(960, 540)
+metadata/_edit_lock_ = true
+
+[node name="NavigationButtons" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.82963
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="L" type="Button" parent="UI/NavigationButtons"]
+visible = false
+modulate = Color(0.235294, 0.94902, 0.192157, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fevd1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fevd1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fevd1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fevd1")
+action_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("10_3kcaj")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="CLOSE" type="Button" parent="UI/NavigationButtons"]
+modulate = Color(0.235294, 0.94902, 0.192157, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6dai0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6dai0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6dai0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6dai0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6dai0")
+action_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("11_56w3p")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="R" type="Button" parent="UI/NavigationButtons"]
+modulate = Color(0.235294, 0.94902, 0.192157, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4h3lw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4h3lw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4h3lw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4h3lw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4h3lw")
+action_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("6_n747p")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="EXAMINE" type="Button" parent="UI"]
+modulate = Color(0.235294, 0.94902, 0.192157, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.933333
+anchor_right = 1.0
+anchor_bottom = 0.118519
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f57b7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f57b7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f57b7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f57b7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f57b7")
+toggle_mode = true
+action_mode = 0
+icon = ExtResource("13_j5wdt")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ZoomBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 1840.0
+offset_top = 128.0
+offset_right = 1880.0
+offset_bottom = 640.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_bb1sn")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/background = SubResource("StyleBoxFlat_ovds7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_23pfm")
+value = 51.57
+fill_mode = 3
+
+[node name="ZoomSlider" type="VSlider" parent="UI/ZoomBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_imsi1")
+theme_override_icons/grabber_highlight = SubResource("PlaceholderTexture2D_imsi1")
+theme_override_icons/grabber_disabled = SubResource("PlaceholderTexture2D_imsi1")
+theme_override_icons/tick = SubResource("PlaceholderTexture2D_imsi1")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_ls68n")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_phrlm")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_fdbmf")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fqn4d")
+}
+speed_scale = 1.5
+
+[node name="PageFlip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_36svx")
+volume_db = 15.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="Boodoowoop" type="AudioStreamPlayer" parent="."]
+pitch_scale = 0.95
+bus = &"SFX"
+
+[node name="BoodoowoopReversed" type="AudioStreamPlayer" parent="."]
+pitch_scale = 0.95
+bus = &"SFX"
+
+[node name="Ploot" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="closed" from="." to="." method="_on_closed"]
+[connection signal="opened" from="." to="." method="_on_opened"]
+[connection signal="mouse_entered" from="Document/DocumentTexture" to="Document/DocumentTexture" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Document/DocumentTexture" to="Document/DocumentTexture" method="_on_mouse_exited"]
+[connection signal="button_down" from="Document/DocumentTexture/FileButton" to="." method="_on_document_drag_begin"]
+[connection signal="button_up" from="Document/DocumentTexture/FileButton" to="." method="_on_document_drag_ended"]
+[connection signal="pressed" from="UI/NavigationButtons/L" to="." method="_on_l_pressed"]
+[connection signal="pressed" from="UI/NavigationButtons/CLOSE" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="UI/NavigationButtons/R" to="." method="_on_r_pressed"]
+[connection signal="toggled" from="UI/EXAMINE" to="." method="_on_examine_toggled"]
+[connection signal="value_changed" from="UI/ZoomBar/ZoomSlider" to="." method="_on_zoom_changed"]

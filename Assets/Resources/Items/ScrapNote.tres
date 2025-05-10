@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="File" load_steps=4 format=3 uid="uid://dyjtbmnemwlj6"]
+
+[ext_resource type="Texture2D" uid="uid://cx13vvcfweu4k" path="res://Assets/Resources/Items/Icons/scrap-paper.png" id="1_0toaq"]
+[ext_resource type="Script" uid="uid://dk4vrjkokrtcv" path="res://Scripts/Items/FileItem.gd" id="1_dkxmg"]
+[ext_resource type="Texture2D" uid="uid://gng0aoieneu7" path="res://Assets/Resources/Items/Images/scrap-note.png" id="3_2qq6s"]
+
+[resource]
+script = ExtResource("1_dkxmg")
+title = "Discarded Note"
+text = "⬈ 3       ⬊ 2
+
+[b]X[/b] marks the spot"
+page_count = 1
+texture = ExtResource("3_2qq6s")
+illustrations = Dictionary[int, Texture2D]({})
+display_type = "Single"
+name = "Scrap Note"
+type = 0
+usable = false
+combinable = false
+examinable = true
+icon = ExtResource("1_0toaq")
+metadata/_custom_type_script = "uid://dk4vrjkokrtcv"

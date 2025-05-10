@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkwjepv00vm0d"]
+
+[ext_resource type="FontFile" uid="uid://fkjry0jqs6no" path="res://Fonts/Swansea-q3pd.ttf" id="1_qc8wa"]
+[ext_resource type="Script" uid="uid://cqghclvvmnm5b" path="res://Scenes/UI/TypewriterLabel.gd" id="2_hkplg"]
+[ext_resource type="AudioStream" uid="uid://q4aft0wrw0yn" path="res://Sounds/SFX/tick.WAV" id="3_hkplg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ugcy"]
+content_margin_left = 25.0
+content_margin_right = 25.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label"]
+anchors_preset = -1
+anchor_right = 0.434896
+anchor_bottom = 0.118519
+offset_right = -784.0
+grow_vertical = 2
+pivot_offset = Vector2(0, 64)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_qc8wa")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ugcy")
+text = "THE DOOR IS LOCKED WITH A SIMPLE LOCK"
+vertical_alignment = 1
+uppercase = true
+max_lines_visible = 1
+visible_characters_behavior = 1
+script = ExtResource("2_hkplg")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="Tick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hkplg")
+volume_db = -10.0
+
+[connection signal="type_text" from="." to="." method="type_out"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

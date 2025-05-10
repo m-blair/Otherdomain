@@ -1,0 +1,57 @@
+~ INTRODUCTION
+*recording starts*
+Pyramid Of Truth: Greetings! This is a Pyramid Of Truth- a cloud-based information library where you can get answers to all sorts of questions!
+Pyramid Of Truth: But not [wave]ALL[/wave] Questions... and much more!!
+Pyramid Of Truth: Anyway... You will find many more identical Pyramid Of Truth's scattered around the world ahead of you.
+Pyramid Of Truth: As you progress through different areas, any files and documentation you take with you will be stored across all access points for your later scrutiny.
+Pyramid Of Truth: Lastly- we urge caution when approaching other access points due to the presence of [color=lime]bad actors[/color] also known as [color=lime]Obelisks Of Lies[/color] trying to pass as official "Pyramid Of Truth" access points.
+Pyramid Of Truth: These Obelisks Of Lies will fill you with all sorts of [color=lime]brainrot[/color] and [color=lime]misinformation[/color] that will cook your brain and make you a souless husk! And then you'll [wave][b][color=red]D I E !!![/color][/b][/wave]
+Pyramid Of Truth: But hey, good luck out there!
+*Recording stops*
+do set_entity_met('Pyramid Of Truth')
+do set_dialogue_line_used('Pyramid Of Truth', 'INTRODUCTION')
+=> END
+
+~ INDEX
+- Where am I?
+	=> HERE
+- Can I die frfr up in this place?
+	=> DYING
+- What is the meaning of life?
+	=> PURPOSE
+- Where do I go from here?
+	=> DIRECTION
+=> END
+
+
+~ HERE
+*recording starts*
+Pyramid Of Truth: The world in front of you is 
+*Recording stops*
+do set_dialogue_line_used('Pyramid Of Truth', 'HERE')
+=> END
+
+
+
+
+~ DYING
+*recording starts*
+Pyramid Of Truth: Nope! You can't die! If you fall off the edge, or get REAAALLLY stuck, you can always press "Numpad 1" to respawn yourself at the start of the area.
+Pyramid Of Truth: There is no concept of physical pain here- but mental pain.... that's another thing.
+*Recording stops*
+do set_dialogue_line_used('Pyramid Of Truth', 'DYING')
+=> END
+
+
+~ PURPOSE
+*recording starts*
+Pyramid Of Truth: It is true that there is no inherent meaning to life, but what we make for ourselves. 
+Pyramid Of Truth: "Life" as we know it is inherently a human construct, comprising of a very narrow slice of perception and interpretation of a vast world, one so complex that it is far beyond the capabilities of humanity alone to comprehend in its entirety.
+Pyramid Of Truth: Therefore, there is no singular purpose, but to enjoy the time you've got. How long it may be.
+*Recording stops*
+do set_dialogue_line_used('Pyramid Of Truth', 'PURPOSE')
+=> END
+
+~ DIRECTION
+
+=> END

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcd7m4c60clxg"]
+
+[ext_resource type="Script" uid="uid://gb472uj0hvtn" path="res://Scenes/GameFiles/Entities/Mujimbi.gd" id="1_flk4r"]
+[ext_resource type="Texture2D" uid="uid://2cp5rptgm16h" path="res://Assets/Sprites/oldman_2.png" id="2_jeexu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vv67q"]
+radius = 2.30271
+height = 7.58239
+
+[node name="Mujimbi" type="Node3D"]
+script = ExtResource("1_flk4r")
+metadata/_custom_type_script = "uid://cvighqccn2p4p"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.555, 0, 0, 0, 0.555, 0, 0, 0, 0.555, 0, 0, 0)
+billboard = 2
+texture = ExtResource("2_jeexu")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 16
+collision_mask = 30
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_vv67q")

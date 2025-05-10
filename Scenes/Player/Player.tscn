@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxdpntltj6k3u"]
+
+[ext_resource type="Script" uid="uid://dqqdc5iwg3ddh" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
+[ext_resource type="AudioStream" uid="uid://fn64qu6w7j6c" path="res://Sounds/SFX/footstep-echo.wav" id="2_ft8w5"]
+[ext_resource type="Script" uid="uid://dcmme84eahgen" path="res://Scenes/Player/FootstepManager.gd" id="2_h54ih"]
+[ext_resource type="Script" uid="uid://pg7ypybl6yjt" path="res://Scripts/PlayerData.gd" id="2_jmcll"]
+[ext_resource type="Script" uid="uid://bk6e3fj17oggs" path="res://Scenes/Player/PlayerStatus.gd" id="3_4wape"]
+[ext_resource type="Script" uid="uid://b7mgttuaue3xh" path="res://Scenes/Player/InteractionManager.gd" id="4_ude3g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l3ax4"]
+radius = 0.325981
+height = 1.4293
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+collision_layer = 3
+collision_mask = 13
+wall_min_slide_angle = 0.0
+floor_stop_on_slope = false
+floor_constant_speed = true
+floor_max_angle = 3.14159
+floor_snap_length = 0.0
+platform_floor_layers = 8
+script = ExtResource("1_s0eop")
+
+[node name="PlayerData" type="Node" parent="."]
+script = ExtResource("2_jmcll")
+
+[node name="PlayerStatus" type="Node" parent="."]
+script = ExtResource("3_4wape")
+
+[node name="FootstepManager" type="Node3D" parent="." node_paths=PackedStringArray("ground_level")]
+script = ExtResource("2_h54ih")
+footstep_sfx = Array[AudioStreamWAV]([ExtResource("2_ft8w5")])
+ground_level = NodePath("../GroundLevel")
+
+[node name="InteractionManager" type="Node3D" parent="." groups=["Player"]]
+script = ExtResource("4_ude3g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.716441, 0)
+shape = SubResource("CapsuleShape3D_l3ax4")
+debug_color = Color(0.35143, 0.293268, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6118, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00342643, 0)
+fov = 30.5
+
+[node name="Raycast" type="RayCast3D" parent="Head"]
+transform = Transform3D(-1.05126e-07, 0, 2.405, 0, 2.405, 0, -2.405, 0, -1.05126e-07, 0, 0, 0)
+target_position = Vector3(1, 0, 0.01)
+collision_mask = 20
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="GroundLevel" type="Marker3D" parent="."]

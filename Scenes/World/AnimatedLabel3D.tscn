@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq0rxquo3tfc5"]
+
+[ext_resource type="FontFile" uid="uid://coe6c71wdlh0v" path="res://Fonts/Times New Roman MT Std Condensed.otf" id="1_top2q"]
+[ext_resource type="Script" uid="uid://dpuyqd3hmixk7" path="res://Scenes/World/AnimatedLabel3D.gd" id="2_sd8x7"]
+[ext_resource type="Gradient" uid="uid://bdhw5q0dy6adh" path="res://Assets/Resources/ColorShift.tres" id="3_524k4"]
+
+[node name="OTHERDOMAINSign" type="Label3D"]
+transform = Transform3D(-1.33757e-07, 0, -3.06, 0, 3.06, 0, 3.06, 0, -1.33757e-07, 0, 0, 0)
+modulate = Color(0, 0.592346, 0.519542, 1)
+outline_modulate = Color(0, 0.592157, 0.517647, 1)
+text = "OTHERDOMAIN"
+font = ExtResource("1_top2q")
+font_size = 150
+outline_size = 0
+script = ExtResource("2_sd8x7")
+color_resource = ExtResource("3_524k4")
+current_color = Color(0, 0.592157, 0.517647, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 25.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,27 @@
+~ INTRODUCTION
+
+???: I can smell you. [wait=3]
+???: Some call me "the "The Watcher". 
+do PlayerData.set_entity_met('Watcher')
+???: Most of the time, I just sit in the sky and stalk you.
+Watcher: Care for a game of 'staring contest'?
+- Sure
+	Watcher: Fantabulous. Let's get started then.
+- No thanks
+	Watcher: Very well then. If you wish to take up my offer some other time, you know where to find me.
+do PlayerData.set_dialogue_line_used('Watcher', 'INTRODUCTION')
+=> END
+
+~ STARING_CONTEST
+Watcher: staring contest.
+
+=> END
+
+
+
+
+~ BYE
+%3 Watcher: See-you around.
+%2 Watcher: I've got my.[wait=0.5]..  [speed=0.01][wave]E Y E S[/wave][speed=0.02]  on you. He He.
+%2 Watcher: L8r g8r. *majestically ascends*
+=> END

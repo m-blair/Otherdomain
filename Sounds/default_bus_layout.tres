@@ -1,0 +1,39 @@
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://c0tvddsd40liu"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+room_size = 0.03
+damping = 0.64
+hipass = 0.5
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j2f15"]
+resource_name = "Reverb"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_ppdcf"]
+resource_name = "Reverb"
+
+[resource]
+bus/1/name = &"Music"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
+bus/1/effect/0/enabled = true
+bus/2/name = &"SFX"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_j2f15")
+bus/2/effect/0/enabled = true
+bus/3/name = &"Ambience"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -6.91795
+bus/3/send = &"SFX"
+bus/3/effect/0/effect = SubResource("AudioEffectReverb_ppdcf")
+bus/3/effect/0/enabled = true

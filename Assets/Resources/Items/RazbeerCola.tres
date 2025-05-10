@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Med" load_steps=4 format=3 uid="uid://hiabc2r0tkba"]
+
+[ext_resource type="Texture2D" uid="uid://dabtnnfcnsb62" path="res://Assets/Sprites/Spritesheets/product_sprites.png" id="1_85vtd"]
+[ext_resource type="Script" uid="uid://cbrjrrfefg4kq" path="res://Scripts/Items/HealingItem.gd" id="1_h7yh4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfs53"]
+atlas = ExtResource("1_85vtd")
+region = Rect2(978.428, 354.268, 117.128, 355.732)
+
+[resource]
+script = ExtResource("1_h7yh4")
+effect = 0
+duration = 3.0
+intensity = 1
+price = 2.15
+name = "Razbeer Cola"
+type = 4
+usable = false
+combinable = false
+examinable = false
+description = "A classic beverage with a classic cola taste, and a hint of raspberry!"
+icon = SubResource("AtlasTexture_wfs53")
+metadata/_custom_type_script = "uid://cbrjrrfefg4kq"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="OtherItem" load_steps=3 format=3 uid="uid://dg1clr66cbyj7"]
+
+[ext_resource type="Texture2D" uid="uid://bh4pbkogy2rni" path="res://Assets/Sprites/fake-money.png" id="1_biryo"]
+[ext_resource type="Script" uid="uid://di11cgu2dqy6x" path="res://Scripts/Items/OtherItem.gd" id="1_t2k18"]
+
+[resource]
+script = ExtResource("1_t2k18")
+equippable = false
+effect = "add_to_bal"
+value = 1.0
+name = "Cash"
+type = 5
+usable = false
+combinable = false
+examinable = false
+description = "A totally normal 1 dollor bill."
+icon = ExtResource("1_biryo")
+metadata/_custom_type_script = "uid://di11cgu2dqy6x"

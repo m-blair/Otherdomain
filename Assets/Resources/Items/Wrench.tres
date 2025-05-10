@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Key" load_steps=3 format=3 uid="uid://cua4q3rqsrw71"]
+
+[ext_resource type="Script" uid="uid://bwnu5dae75e0g" path="res://Scripts/Items/KeyItem.gd" id="1_6tsho"]
+[ext_resource type="Texture2D" uid="uid://8yx6rdynqqi3" path="res://Assets/Resources/Items/Icons/wrench.png" id="1_nrtmj"]
+
+[resource]
+script = ExtResource("1_6tsho")
+key_id = 87987967
+name = "Wrench"
+type = 2
+usable = true
+combinable = false
+examinable = false
+description = "A trusty old adjustable wrench. Good for dealing with nuts and bolts."
+icon = ExtResource("1_nrtmj")
+metadata/_custom_type_script = "uid://bwnu5dae75e0g"

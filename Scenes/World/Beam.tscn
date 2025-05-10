@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=4 uid="uid://dwv3e7176ov3c"]
+
+[ext_resource type="Script" uid="uid://hgiyen7kdpkd" path="res://Scenes/World/Beam.gd" id="1_md6en"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mavba"]
+albedo_color = Color(0.696803, 0, 0.200007, 1)
+emission_enabled = true
+emission = Color(0.847059, 0, 0.25098, 1)
+emission_energy_multiplier = 9.06
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0a7o3"]
+_surfaces = [{
+"aabb": AABB(-0.2, -25, -0.2, 0.4, 50, 0.4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_mavba"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvgAAyMHNzEw+zcxMvgAAyMHNzEy+zcxMvgAAyEHNzEy+zcxMPgAAyMHNzEy+zcxMvgAAyMHNzEy+zcxMvgAAyMHNzEw+zcxMvgAAyEHNzEy+zcxMvgAAyMHNzEy+zcxMPgAAyMHNzEy+zcxMvgAAyEHNzEy+zcxMvgAAyEHNzEw+zcxMvgAAyMHNzEw+zcxMvgAAyMHNzEw+zcxMvgAAyEHNzEw+zcxMPgAAyEHNzEw+zcxMPgAAyEHNzEw+zcxMvgAAyEHNzEw+zcxMvgAAyEHNzEy+zcxMvgAAyMHNzEw+zcxMPgAAyMHNzEw+zcxMPgAAyMHNzEy+zcxMPgAAyEHNzEw+zcxMPgAAyMHNzEw+zcxMvgAAyMHNzEw+zcxMPgAAyMHNzEy+zcxMPgAAyMHNzEw+zcxMPgAAyEHNzEw+zcxMPgAAyMHNzEy+zcxMPgAAyEHNzEy+zcxMvgAAyEHNzEy+zcxMvgAAyEHNzEy+zcxMPgAAyEHNzEy+zcxMPgAAyEHNzEw+zcxMPgAAyEHNzEw+zcxMPgAAyEHNzEy+zcxMPgAAyMHNzEy+AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[node name="Beam" type="Node3D"]
+script = ExtResource("1_md6en")
+beam_color = Color(0.8454, 0, 0.252458, 1)
+
+[node name="Point" type="Marker3D" parent="."]
+gizmo_extents = 0.55
+
+[node name="RayCast3D" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -0.130724, 0, 0)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D2" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.000290684, 0, 0)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D3" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.131276, 0, 0)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D4" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -0.130724, 0, 0.131132)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D5" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.000290684, 0, 0.131132)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D6" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.131276, 0, 0.131132)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D7" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -0.130724, 0, -0.130967)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D8" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.000290684, 0, -0.130967)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="RayCast3D9" type="RayCast3D" parent="Point"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.131276, 0, -0.130967)
+target_position = Vector3(0, -50, 0)
+collision_mask = 0
+debug_shape_custom_color = Color(0.885732, 0, 0.447187, 1)
+debug_shape_thickness = 5
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49012e-08, 24.9427, -1.49012e-08)
+mesh = SubResource("ArrayMesh_0a7o3")

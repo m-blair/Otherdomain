@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dx88cph3h8r0i"
+path.s3tc="res://.godot/imported/highway_tijmbezxa_4K_Bump.jpg-26f00b8f423bd8ab97757f04cfc11b4e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "fda79952bf7af846c94914835c056e73"
+}
+
+[deps]
+
+source_file="res://Assets/Models/highway_tijmbezxa_4K_Bump.jpg"
+dest_files=["res://.godot/imported/highway_tijmbezxa_4K_Bump.jpg-26f00b8f423bd8ab97757f04cfc11b4e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Assets/Models/highway_tijmbezxa_4K_Bump.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
