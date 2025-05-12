@@ -2,7 +2,7 @@
 # OTHERDOMAIN
 
 
-![Figure A - Hub](res://External/Screenshot3.png)
+![Figure A - Hub](External/Screenshot3.png)
 
 ## Overview
 You wake up in an unfamiliar place- alone. 
@@ -31,12 +31,12 @@ OTHERDOMAIN is a surreal, dream-like, exploration game centered around navigatin
 ***
 ## SCREENSHOTS
 
-![Figure B](res://External/Screenshot1a.png)
+![Figure B - Room 1A](External/screenshot1a.png)
 
-![Figure C](res://External/Screenshot2a.png)
+![Figure C - Vending Machine](External/Screenshot2a.png)
 
-![Figure D](res://External/Screenshot4.jpg)
+![Figure D - Entity](External/Screenshot4.jpg)
 
-![Figure E](res://External/Screenshot5.jpg)
+![Figure E - Inventory View](External/Screenshot5.jpg)
 
 ![Figure F](res://External/Screenshot6.jpg)
