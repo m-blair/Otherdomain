@@ -6,25 +6,12 @@ class_name Inventory extends Resource
 
 
 func add_item(item: Item) -> void:
-	if not Global.limit_capcity:
-		if item is OtherItem:
-			add_special(item)
-		else:
+	if not item.name == "Cash":  ## NOTE: All cash items just change balance and are not added to inv
+		if not Global.limit_capcity:
 			items.append(item)
-	else:
-		if max(items.size() + 1, Global.MAX_INVENTORY_SIZE) == Global.MAX_INVENTORY_SIZE:
-			if item is OtherItem:
-				add_special(item)
-			else:
+		else:
+			if max(items.size() + 1, Global.MAX_INVENTORY_SIZE) == Global.MAX_INVENTORY_SIZE:
 				items.append(item)
-
-
-func add_special(item: OtherItem) -> void:
-	var eff_str = item.effect
-	if "add_to_bal" in eff_str:
-		GameState.player.player_data.balance += item.value
-		print("+$%s" % str(item.value))
-		
 
 
 func remove_item(item: Item) -> void:

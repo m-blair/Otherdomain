@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://byawrkt6qsdbj"]
+
+[ext_resource type="Texture2D" uid="uid://by3goo28mw48b" path="res://Assets/Models/theater_Carpet fabric_BaseColor.jpg" id="1_76a0b"]
+[ext_resource type="Texture2D" uid="uid://cp2ppwormsret" path="res://Assets/Models/theater_Carpet fabric_Displacement.png" id="2_i77x0"]
+[ext_resource type="Texture2D" uid="uid://5qw1vc8kbh0" path="res://Assets/Models/theater_Carpet fabric_Normal.jpg" id="3_pgdti"]
+
+[resource]
+resource_name = "Carpet fabric"
+cull_mode = 2
+albedo_color = Color(0.903598, 0.903598, 0.903598, 1)
+albedo_texture = ExtResource("1_76a0b")
+albedo_texture_force_srgb = true
+metallic_texture = ExtResource("2_i77x0")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_i77x0")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 1.4
+normal_texture = ExtResource("3_pgdti")
+heightmap_scale = -15.0
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar_sharpness = 0.233258
+texture_filter = 2

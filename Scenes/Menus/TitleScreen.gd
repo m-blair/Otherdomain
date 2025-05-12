@@ -40,7 +40,7 @@ const slots_end_pos := Vector2(1216, 216)
 @onready var curtain: ColorRect = $Curtain
 
 
-signal done(dest_screen: int)
+signal done(dest_screen: StringName)
 
 
 func _ready() -> void:
@@ -120,8 +120,6 @@ func _on_save_slot_selected(toggled_on: bool, button: Button) -> void:
 	else:
 		blup.play()
 		begin_button.hide()
-	
-	
 
 
 
@@ -146,7 +144,7 @@ func _on_start_pressed() -> void:
 	shade.tween_property(curtain, 'self_modulate', Color.WHITE, 3)
 	await shade.finished
 	shade.kill()
-	done.emit(Global.SCREENS.GAME)
+	done.emit(&"Game")
 
 
 

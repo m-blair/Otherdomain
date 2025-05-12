@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="OtherItem" load_steps=2 format=3 uid="uid://dgne1fydb5q1b"]
+
+[ext_resource type="Script" uid="uid://di11cgu2dqy6x" path="res://Scripts/Items/OtherItem.gd" id="1_7lo16"]
+
+[resource]
+script = ExtResource("1_7lo16")
+equippable = false
+effect = ""
+value = 0.0
+name = "Trail Mix"
+type = 5
+usable = false
+combinable = false
+examinable = false
+description = ""
+metadata/_custom_type_script = "uid://di11cgu2dqy6x"

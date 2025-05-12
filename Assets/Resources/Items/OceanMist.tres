@@ -18,6 +18,6 @@ type = 4
 usable = true
 combinable = false
 examinable = false
-description = ""
+description = "Highly refreshing sparkling water that has an air of sophistication to it."
 icon = SubResource("AtlasTexture_snnfo")
 metadata/_custom_type_script = "uid://cbrjrrfefg4kq"

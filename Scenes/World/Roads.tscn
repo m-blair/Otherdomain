@@ -1,7 +1,7 @@
 [gd_scene load_steps=62 format=4 uid="uid://bisyyqu1bg2s6"]
 
 [ext_resource type="Script" uid="uid://bbtrtqj26ta8j" path="res://Scenes/World/Roads.gd" id="1_jcdic"]
-[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/SpawnPoint.tscn" id="1_q437i"]
+[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/Objects/SpawnPoint.tscn" id="1_q437i"]
 [ext_resource type="Texture2D" uid="uid://xxcs0qeeeujk" path="res://Assets/Models/highway_tijmbezxa_4K_Albedo.jpg" id="1_ru581"]
 [ext_resource type="Texture2D" uid="uid://6m1bb5hc1agi" path="res://Assets/Models/highway_tijmbezxa_4K_Roughness.png" id="2_4chs7"]
 [ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_k5irk"]

@@ -16,7 +16,8 @@ func play_footstep() -> void:
 	var rand_idx = 0
 	audio_player.stream = footstep_sfx[rand_idx]
 	audio_player.bus = &"SFX"
-	audio_player.volume_db = -10
+	audio_player.volume_db = -20
+	
 	audio_player.pitch_scale = randf_range(0.8, 1.2)
 	ground_level.add_child(audio_player)
 	audio_player.play()

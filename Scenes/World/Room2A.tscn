@@ -1,11 +1,11 @@
 [gd_scene load_steps=33 format=4 uid="uid://b0pbpwwldv5uc"]
 
 [ext_resource type="Script" uid="uid://b8cedqhoymcoy" path="res://Scenes/World/Room2A.gd" id="1_vmvs4"]
-[ext_resource type="PackedScene" uid="uid://baun615xxggqv" path="res://Scenes/World/Stairs.tscn" id="2_rig8y"]
+[ext_resource type="PackedScene" uid="uid://baun615xxggqv" path="res://Scenes/GameFiles/Objects/Stairs.tscn" id="2_rig8y"]
 [ext_resource type="Material" uid="uid://cyqe3kqrh0juo" path="res://Assets/Materials/Wooden.tres" id="3_2kr1j"]
 [ext_resource type="Texture2D" uid="uid://dadtxrrje3eya" path="res://Assets/Models/classic-wooden-door_k_715_t_cherry_0000.jpg" id="4_yhhsa"]
 [ext_resource type="PackedScene" uid="uid://bc0mmx43lmda8" path="res://Scenes/GameFiles/Objects/ClassicWoodenDoor.tscn" id="5_aio0t"]
-[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/SpawnPoint.tscn" id="6_7f8nv"]
+[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/Objects/SpawnPoint.tscn" id="6_7f8nv"]
 [ext_resource type="Script" uid="uid://bidgmopjyvi1w" path="res://Scenes/GameFiles/Objects/ClassicWoodenDoor.gd" id="7_7f8nv"]
 [ext_resource type="PackedScene" uid="uid://cxdpntltj6k3u" path="res://Scenes/Player/Player.tscn" id="7_o8oya"]
 [ext_resource type="AudioStream" uid="uid://fm7y2jcdo0pd" path="res://Sounds/SFX/DR-WD01.wav" id="8_o8oya"]

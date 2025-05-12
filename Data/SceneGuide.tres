@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RoomDict" load_steps=2 format=3 uid="uid://bqx44im0l75wb"]
+
+[ext_resource type="Script" uid="uid://cm8dnx4j14oed" path="res://Data/RoomDict.gd" id="1_e2jmd"]
+
+[resource]
+script = ExtResource("1_e2jmd")
+rooms = Dictionary[StringName, String]({
+&"Game": "res://Scenes/GameFiles/Game.tscn",
+&"HUD": "res://Scenes/UI/HUD.tscn",
+&"Intro": "res://Scenes/Media/Introduction.tscn",
+&"ItemDB": "res://Scenes/GameFiles/Items/ItemDB.tscn",
+&"Title": "res://Scenes/Menus/TitleScreen.tscn"
+})
+metadata/_custom_type_script = "uid://cm8dnx4j14oed"

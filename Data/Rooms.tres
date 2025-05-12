@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RoomDict" load_steps=2 format=3 uid="uid://cm4v47olawokp"]
+
+[ext_resource type="Script" uid="uid://cm8dnx4j14oed" path="res://Data/RoomDict.gd" id="1_orxl0"]
+
+[resource]
+script = ExtResource("1_orxl0")
+rooms = Dictionary[StringName, String]({
+&"1A": "res://Scenes/World/Room1A.tscn",
+&"2A": "res://Scenes/World/Room2A.tscn",
+&"3A": "res://Scenes/World/Room3A.tscn",
+&"4B": "res://Scenes/World/Room4B.tscn",
+&"Hub": "res://Scenes/World/Hub.tscn",
+&"Roads": "res://Scenes/World/Roads.tscn",
+&"Testing": "res://Scenes/World/TestingZone.tscn",
+&"Theater": "res://Scenes/World/MovieTheater.tscn"
+})
+metadata/_custom_type_script = "uid://cm8dnx4j14oed"

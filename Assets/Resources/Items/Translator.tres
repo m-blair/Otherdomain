@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="OtherItem" load_steps=2 format=3 uid="uid://dnprm42efaivc"]
+
+[ext_resource type="Script" uid="uid://di11cgu2dqy6x" path="res://Scripts/Items/OtherItem.gd" id="1_yygjg"]
+
+[resource]
+script = ExtResource("1_yygjg")
+equippable = true
+effect = "trans_to_eng"
+value = 0.0
+name = "Translator"
+type = 5
+usable = false
+combinable = false
+examinable = false
+description = "A device used to communicate between two different languages."
+metadata/_custom_type_script = "uid://di11cgu2dqy6x"

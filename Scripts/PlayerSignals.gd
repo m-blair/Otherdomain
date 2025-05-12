@@ -1,7 +1,7 @@
 class_name PlayerSignals extends Node
 
 # rooms
-signal exited_room(next_room: String, door: int)
+signal exited_room(next_room: StringName, door: int)
 signal entered_room(door_id: int)
 
 

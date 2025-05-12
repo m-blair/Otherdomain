@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://oj5rurodrgau" path="res://Assets/Models/street-light_untitled_DefaultMaterial_Height.png" id="3_vil5n"]
 [ext_resource type="Texture2D" uid="uid://bwv8a6mystcgt" path="res://Assets/Models/street-light_ice blue brushed metal normal map.png" id="4_g8b4u"]
 [ext_resource type="Texture2D" uid="uid://bg3e5ywof452w" path="res://Assets/Models/street-light_ice blue brushed metal roughness map.png" id="5_ivsfe"]
-[ext_resource type="AudioStream" uid="uid://drsi3k1ce1ylj" path="res://Sounds/SFX/DR_MTL01.WAV" id="6_g8b4u"]
+[ext_resource type="AudioStream" uid="uid://fm7y2jcdo0pd" path="res://Sounds/SFX/DR-WD01.wav" id="6_g8b4u"]
 [ext_resource type="AudioStream" uid="uid://bcij1jibironi" path="res://Sounds/SFX/DR_MTL02.WAV" id="7_ivsfe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yncya"]
@@ -190,6 +190,8 @@ visible = false
 shape = SubResource("ConcavePolygonShape3D_jmsqb")
 
 [node name="Area3D" type="Area3D" parent="DoorFrame_001/Door_001"]
+collision_layer = 4
+collision_mask = 30
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorFrame_001/Door_001/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329953, -0.00537109, 0.00473022)

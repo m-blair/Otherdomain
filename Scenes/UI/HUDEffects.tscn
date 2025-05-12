@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqmes45snjpqi"]
+[gd_scene load_steps=3 format=3 uid="uid://cqmes45snjpqi"]
 
 [ext_resource type="Script" uid="uid://dgg5e4cd456ng" path="res://Scenes/UI/HUDEffects.gd" id="1_0c4j1"]
+[ext_resource type="FontFile" uid="uid://b886puej5lvph" path="res://Fonts/SwanseaBold-D0ox.ttf" id="2_7kh32"]
 
 [node name="HUDEffects" type="Control"]
 z_index = 100
@@ -23,5 +24,27 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_lock_ = true
 
+[node name="CashText" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416667
+anchor_top = 0.518838
+anchor_right = 0.629167
+anchor_bottom = 0.607727
+offset_top = -32.345
+offset_bottom = -32.345
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_7kh32")
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+text = "[wave]+ $1[/wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [connection signal="fade_in" from="." to="." method="_on_fade_in"]
 [connection signal="fade_out" from="." to="." method="_on_fade_out"]
+[connection signal="flash_cash_text" from="." to="." method="_on_flash_cash_text"]

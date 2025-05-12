@@ -1,9 +1,9 @@
-[gd_scene load_steps=71 format=4 uid="uid://cawsjhaadawm0"]
+[gd_scene load_steps=72 format=4 uid="uid://cawsjhaadawm0"]
 
 [ext_resource type="Script" uid="uid://b51e767oq7frv" path="res://Scenes/World/Room1A.gd" id="1_8s4r5"]
-[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/SpawnPoint.tscn" id="2_jtefy"]
+[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/Objects/SpawnPoint.tscn" id="2_jtefy"]
 [ext_resource type="AudioStream" uid="uid://vvgir3q4uu7x" path="res://Sounds/SFX/beep001.wav" id="4_jtefy"]
-[ext_resource type="PackedScene" uid="uid://guq1t261ai3k" path="res://Scenes/World/Escalator.tscn" id="4_ycj1n"]
+[ext_resource type="PackedScene" uid="uid://guq1t261ai3k" path="res://Scenes/GameFiles/Objects/Escalator.tscn" id="4_ycj1n"]
 [ext_resource type="Texture2D" uid="uid://bcju654yhawxg" path="res://Assets/Textures/rough_plastic.jpg" id="7_afxjh"]
 [ext_resource type="PackedScene" uid="uid://dlqikid05ynqm" path="res://Scenes/UI/DialogueTextBalloon.tscn" id="10_2md5g"]
 [ext_resource type="PackedScene" uid="uid://cxdpntltj6k3u" path="res://Scenes/Player/Player.tscn" id="10_avgp4"]
@@ -22,6 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://di7x1e8mmo47q" path="res://Sounds/SFX/crash.wav" id="15_tv7g4"]
 [ext_resource type="PackedScene" uid="uid://bag5wenefs3ft" path="res://Scenes/GameFiles/Objects/FakeBush.tscn" id="16_8hcwj"]
 [ext_resource type="AudioStream" uid="uid://bwk42h4ypu8ob" path="res://Sounds/SFX/blup.wav" id="16_ggyic"]
+[ext_resource type="PackedScene" uid="uid://bjbyl8dtk60ws" path="res://Scenes/GameFiles/Objects/StreetLight.tscn" id="16_q6mtw"]
 [ext_resource type="Texture2D" uid="uid://bss0gg7gr3mmm" path="res://Assets/Backgrounds/forest.png" id="17_2pdju"]
 [ext_resource type="PackedScene" uid="uid://bc0mmx43lmda8" path="res://Scenes/GameFiles/Objects/ClassicWoodenDoor.tscn" id="24_pwfxb"]
 [ext_resource type="PackedScene" uid="uid://beymjtmt3poy6" path="res://Scenes/GameFiles/Items/ItemDrop.tscn" id="25_2pdju"]
@@ -2304,6 +2305,17 @@ transform = Transform3D(4.29464e-07, 0, -3.275, 0, 3.275, 0, 3.275, 0, 4.29464e-
 visible = false
 texture = ExtResource("17_2pdju")
 
+[node name="StreetLamp" parent="NavigationRegion3D/Decorative" instance=ExtResource("16_q6mtw")]
+transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 21.0034, 6.4, -73.1)
+
+[node name="FakeBush19" parent="NavigationRegion3D/Decorative" instance=ExtResource("16_8hcwj")]
+transform = Transform3D(0.422618, 0, -0.906308, 0, 1, 0, 0.906308, 0, 0.422618, 19.409, 6.9, -74.588)
+modulate = Color(0.0412013, 0.512122, 0.577009, 1)
+
+[node name="FakeBush20" parent="NavigationRegion3D/Decorative" instance=ExtResource("16_8hcwj")]
+transform = Transform3D(-0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, -0.984808, 19.409, 6.9, -74.588)
+modulate = Color(0.0412013, 0.512122, 0.577009, 1)
+
 [node name="Beep001" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jtefy")
 
@@ -2312,7 +2324,6 @@ stream = ExtResource("4_jtefy")
 [node name="RPSGuy" type="Node3D" parent="."]
 transform = Transform3D(0.178868, 0, 0.17466, 0, 0.25, 0, -0.17466, 0, 0.178868, -11.6584, 7.21165, -57.7836)
 script = ExtResource("12_7ptap")
-in_range_of_opponent = true
 metadata/_custom_type_script = "uid://c5g4q67y65r8b"
 
 [node name="RPSGuyAnimationPlayer" type="AnimationPlayer" parent="RPSGuy"]
@@ -2388,7 +2399,7 @@ locked_hint = "The door is locked with a simple lock"
 
 [node name="BasicDoor" parent="." instance=ExtResource("29_4tvt4")]
 transform = Transform3D(-1.32, 0, -1.99314e-07, 0, 1.32, 0, 1.99314e-07, 0, -1.32, -1.69846e-05, 6.40672, -103.859)
-next_room_id = &"Roads"
+next_room_id = &"Hub"
 open = true
 door_id = 1
 player_spawn_location = 1

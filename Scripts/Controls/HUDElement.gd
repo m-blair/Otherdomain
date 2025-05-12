@@ -10,7 +10,7 @@ class_name HUDElement extends Control
 @export var open: bool:
 	set(value):
 		open = value
-		visible = open
+		visible = value
 	get(): return open
 
 
@@ -20,5 +20,5 @@ class_name HUDElement extends Control
 var supressing: bool:
 	set(value):
 		supressing = value
-		visible = not supressing
-		open = not supressing
+		visible = not value
+		open = not value

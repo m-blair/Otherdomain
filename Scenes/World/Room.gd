@@ -15,9 +15,8 @@ extends Node3D
 @export var objects: Array[InteractiveObject3D]
 
 func _ready() -> void:
-	GameState.player = player
 	GameState.current_room_id = room_id
-	player.player_data.current_room = room_id
+	player.safe_margin = 0.01
 	setup()
 
 
@@ -39,6 +38,7 @@ func setup() -> void:
 
 
 func get_door(door_id: int):
+	if doors.is_empty(): return
 	for d in doors:
 		if d.door_id == door_id:
 			return d

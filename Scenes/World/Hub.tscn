@@ -1,11 +1,11 @@
-[gd_scene load_steps=48 format=4 uid="uid://uodfqe4wtnmu"]
+[gd_scene load_steps=49 format=4 uid="uid://uodfqe4wtnmu"]
 
 [ext_resource type="Script" uid="uid://dentgbh0eseuc" path="res://Scenes/World/Hub.gd" id="1_rhihr"]
 [ext_resource type="PackedScene" uid="uid://dyu31sglh4ydt" path="res://Scenes/GameFiles/Objects/BasicDoor.tscn" id="2_0oph5"]
 [ext_resource type="FontFile" uid="uid://bxh0yf8gqhjgx" path="res://Fonts/SwanseaBoldItalic-p3Dv.ttf" id="2_khkmv"]
 [ext_resource type="Texture2D" uid="uid://lasoflu3l4pn" path="res://Assets/Models/Ground037_2K-JPG_Roughness.jpg" id="2_rhihr"]
 [ext_resource type="Material" uid="uid://7mbrmubxvqet" path="res://Assets/Materials/BL.tres" id="3_1um61"]
-[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/SpawnPoint.tscn" id="3_sam1l"]
+[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/Objects/SpawnPoint.tscn" id="3_sam1l"]
 [ext_resource type="PackedScene" uid="uid://cxdpntltj6k3u" path="res://Scenes/Player/Player.tscn" id="4_r2dwx"]
 [ext_resource type="Material" uid="uid://cyqe3kqrh0juo" path="res://Assets/Materials/Wooden.tres" id="4_xv3re"]
 [ext_resource type="Texture2D" uid="uid://c7sovtqi5qb7r" path="res://Assets/Models/old-computer_Old rubber_Metallic-Old rubber_Roughness.png" id="5_3wn7x"]
@@ -13,13 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://beymjtmt3poy6" path="res://Scenes/GameFiles/Items/ItemDrop.tscn" id="6_7fvl6"]
 [ext_resource type="FontFile" uid="uid://b886puej5lvph" path="res://Fonts/SwanseaBold-D0ox.ttf" id="6_khkmv"]
 [ext_resource type="PackedScene" uid="uid://cuwolqqk53rqh" path="res://Scenes/GameFiles/Objects/VendingMachine.tscn" id="7_0am6y"]
-[ext_resource type="PackedScene" uid="uid://cq0rxquo3tfc5" path="res://Scenes/World/AnimatedLabel3D.tscn" id="7_rhihr"]
+[ext_resource type="PackedScene" uid="uid://cq0rxquo3tfc5" path="res://Scenes/UI/AnimatedLabel3D.tscn" id="7_rhihr"]
 [ext_resource type="Resource" uid="uid://cg8np08edr3k1" path="res://Assets/Resources/Items/BugJuice.tres" id="8_521ng"]
 [ext_resource type="PackedScene" uid="uid://bhb7ci484iiyt" path="res://Scenes/GameFiles/Objects/FakeTree.tscn" id="9_1rlfh"]
 [ext_resource type="PackedScene" uid="uid://bag5wenefs3ft" path="res://Scenes/GameFiles/Objects/FakeBush.tscn" id="10_3p7vf"]
 [ext_resource type="Resource" uid="uid://bxfwpn626v7vv" path="res://Assets/Resources/Items/Cash10.tres" id="13_1um61"]
 [ext_resource type="AudioStream" uid="uid://dwgm5mapaysbv" path="res://Sounds/Music/dark-synth-165100.mp3" id="19_3p7vf"]
 [ext_resource type="AudioStream" uid="uid://d3g53jl4xbadi" path="res://Sounds/Music/ambient_forest_ai_1.mp3" id="20_yir1p"]
+[ext_resource type="Resource" uid="uid://7wcwr2dtyinp" path="res://Assets/Resources/Items/Entity-Encyclopedia.tres" id="21_yir1p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1um61"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -299,6 +300,14 @@ font = ExtResource("2_khkmv")
 outline_size = 5
 uppercase = true
 
+[node name="Label3D14" type="Label3D" parent="Decorative/DoorLabels"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.6214, 2.528, -9.99039)
+modulate = Color(0, 0, 0, 1)
+text = "CINEMA"
+font = ExtResource("2_khkmv")
+outline_size = 5
+uppercase = true
+
 [node name="Label3D8" type="Label3D" parent="Decorative/DoorLabels"]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -2.8, 2.528, 9.98765)
 visible = false
@@ -475,11 +484,13 @@ line_spacing = 15.0
 transform = Transform3D(-1.33757e-07, 0, -3.06, 0, 3.06, 0, 3.06, 0, -1.33757e-07, 10, 5.448, 4.37114e-07)
 
 [node name="PlayerCountLabel" type="Label3D" parent="Decorative"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 4.20789, 8.74228e-08)
-text = "PLAYERS ONLINE:            0"
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 3.99925, 8.74228e-08)
+text = "HUMANS ONLINE:            0
+"
 font = ExtResource("6_khkmv")
 font_size = 122
 outline_size = 23
+line_spacing = 50.0
 
 [node name="Archway3" type="MeshInstance3D" parent="Decorative"]
 transform = Transform3D(-2.64891e-08, 0, -0.606, 0, 0.606, 0, 0.606, 0, -2.64891e-08, -21.3312, 0, -9.32416e-07)
@@ -691,26 +702,37 @@ locked = true
 transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, -2.18557e-06, 0, -10)
 next_room_id = &"3A"
 open = true
+door_id = 2
 
 [node name="BasicDoor7" parent="." instance=ExtResource("2_0oph5")]
 transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, 1.4, 0, -10)
 next_room_id = &"4A"
 open = true
+door_id = 3
 
 [node name="BasicDoor8" parent="." instance=ExtResource("2_0oph5")]
 transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, 2.8, 0, -10)
 next_room_id = &"Roads"
 open = true
+door_id = 4
 
 [node name="BasicDoor11" parent="." instance=ExtResource("2_0oph5")]
 transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, 4.175, 0, -10)
 next_room_id = &"Testing"
 open = true
+door_id = 5
+
+[node name="BasicDoor12" parent="." instance=ExtResource("2_0oph5")]
+transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, 5.55, 0, -10)
+next_room_id = &"Theater"
+open = true
+door_id = 6
 
 [node name="BasicDoor9" parent="." instance=ExtResource("2_0oph5")]
 transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, -1.4, 0, -10)
 next_room_id = &"2A"
 open = true
+door_id = 1
 
 [node name="BasicDoor10" parent="." instance=ExtResource("2_0oph5")]
 transform = Transform3D(1.25, 0, 1.63918e-07, 0, 1.25, 0, -1.63918e-07, 0, 1.25, -2.8, 0, -10)
@@ -734,7 +756,7 @@ item = ExtResource("13_1um61")
 transform = Transform3D(-0.85, 0, 1.28346e-07, 0, 0.85, 0, -1.28346e-07, 0, -0.85, -9.64849, 0, -8.43497e-07)
 
 [node name="ItemDrop2" parent="." instance=ExtResource("6_7fvl6")]
-transform = Transform3D(0.6, 0, 0, 0, 0.597717, -0.0522933, 0, 0.0522933, 0.597717, -9.49966, 0.210114, 1.05885)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 1.52737e-07, 0, -1.52737e-07, 0.6, -9.49966, 0.270114, 1.05885)
 item = ExtResource("8_521ng")
 
 [node name="bg-music" type="AudioStreamPlayer" parent="."]
@@ -750,3 +772,8 @@ unit_size = 15.0
 autoplay = true
 bus = &"Ambience"
 parameters/looping = true
+
+[node name="ItemDrop3" parent="." instance=ExtResource("6_7fvl6")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -3.79541, 1.23502, 0)
+item = ExtResource("21_yir1p")
+sprite_billboarding = false

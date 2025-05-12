@@ -78,8 +78,8 @@ func desupress_and_hide() -> void:
 			if hud_elt.supressing:
 				hud_elt.supressing = false
 				hud_elt.hide()
-			else:
-				hud_elt.hide()
+			#else:
+				#hud_elt.hide()
 
 
 
@@ -108,7 +108,8 @@ func _on_menu_doc_reader_open_request(item: Item) -> void:
 	doc_reader.show()
 	await doc_reader.closed
 	menu.boodoowoop_reversed.play()
-	control_popup.supressing = false
+	control_popup.hide()
+
 
 
 
@@ -123,7 +124,7 @@ func _on_hide_name_text_box() -> void:
 
 func _on_item_pickup_request(item_drop: ItemDrop) -> void:
 	print("pickup request %s" % item_drop.item.name)
-	menu.player.player_data.inventory.add_item(item_drop.item)
+	player.player_data.inventory.add_item(item_drop.item)
 	menu.load_inventory()
 	menu.boodoowoop.play()
 	control_popup.hide_control_popup.emit()

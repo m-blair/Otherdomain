@@ -1,7 +1,7 @@
 [gd_scene load_steps=42 format=4 uid="uid://lddyyndxcs6e"]
 
 [ext_resource type="Script" uid="uid://dsr1bjx0lehsa" path="res://Scenes/World/Room.gd" id="1_nsnfp"]
-[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/SpawnPoint.tscn" id="2_puv2j"]
+[ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/Objects/SpawnPoint.tscn" id="2_puv2j"]
 [ext_resource type="Texture2D" uid="uid://8qc7dbid54pf" path="res://Assets/Backgrounds/sky.png" id="2_ue3cu"]
 [ext_resource type="Texture2D" uid="uid://lbpeumpvqfn5" path="res://Assets/Models/escalator_painted_metal_shutter_diff_8k.jpg" id="3_s5k6w"]
 [ext_resource type="PackedScene" uid="uid://bc0mmx43lmda8" path="res://Scenes/GameFiles/Objects/ClassicWoodenDoor.tscn" id="6_42kdj"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://folskweyghi3" path="res://Scenes/GameFiles/Objects/ObeliskOfLies.tscn" id="8_mu6nl"]
 [ext_resource type="Texture2D" uid="uid://gpdh1tf1pwoj" path="res://Assets/Models/Wanderer_bump_rock_05k - Copy.jpg" id="9_2023q"]
 [ext_resource type="PackedScene" uid="uid://cxdpntltj6k3u" path="res://Scenes/Player/Player.tscn" id="9_mavba"]
-[ext_resource type="Script" uid="uid://hgiyen7kdpkd" path="res://Scenes/World/Beam.gd" id="9_nsuv8"]
+[ext_resource type="Script" uid="uid://hgiyen7kdpkd" path="res://Scenes/GameFiles/Objects/Beam.gd" id="9_nsuv8"]
 [ext_resource type="Texture2D" uid="uid://c78s653a343yb" path="res://Assets/Models/smile-dog-corrupted.png" id="10_3tqry"]
 [ext_resource type="Texture2D" uid="uid://2fmqrhrepmpf" path="res://Assets/Icons/Exclamation.svg" id="11_re78r"]
 [ext_resource type="AudioStream" uid="uid://n3nndvfvs2q5" path="res://Sounds/SFX/tv-static-7019.mp3" id="12_le5tv"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bkd4kfjswru31"]
+[gd_scene load_steps=48 format=3 uid="uid://bkd4kfjswru31"]
 
 [ext_resource type="Script" uid="uid://trw7usbmysak" path="res://Scenes/UI/MENU.gd" id="1_c0bnu"]
 [ext_resource type="AudioStream" uid="uid://bwk42h4ypu8ob" path="res://Sounds/SFX/blup.wav" id="1_ss33t"]
@@ -6,11 +6,13 @@
 [ext_resource type="AudioStream" uid="uid://c45v5h8cscd34" path="res://Sounds/SFX/typewriter_tick.wav" id="2_c0bnu"]
 [ext_resource type="AudioStream" uid="uid://cisguvo4xpvr7" path="res://Sounds/SFX/booweep.WAV" id="3_0fxxn"]
 [ext_resource type="Texture2D" uid="uid://dnon3t5c2vtst" path="res://Assets/Sprites/Spritesheets/rick_pfp.png" id="3_np2s5"]
-[ext_resource type="FontFile" uid="uid://b2byrn5smbid5" path="res://Fonts/Bergamot_dark-Regular.ttf" id="4_2lsfw"]
 [ext_resource type="FontFile" uid="uid://b4fhcqy8xh8sw" path="res://Fonts/SwanseaItalic-AwqD.ttf" id="5_dv016"]
+[ext_resource type="Texture2D" uid="uid://bh4pbkogy2rni" path="res://Assets/Sprites/fake-money.png" id="5_okuqr"]
 [ext_resource type="FontFile" uid="uid://fkjry0jqs6no" path="res://Fonts/Swansea-q3pd.ttf" id="6_86um4"]
+[ext_resource type="Texture2D" uid="uid://bu6nu0tly7klb" path="res://Assets/Sprites/fake-money2.png" id="6_bdck3"]
 [ext_resource type="AudioStream" uid="uid://bldne64g4huum" path="res://Sounds/SFX/DECIDE.wav" id="6_hpqiu"]
 [ext_resource type="Texture2D" uid="uid://drly2lmy42pm2" path="res://Assets/Sprites/no_save_data_placeholder_slot_image.png" id="7_2lsfw"]
+[ext_resource type="Texture2D" uid="uid://bynm18crvnb3k" path="res://Assets/Sprites/wallet.png" id="7_bo8ep"]
 [ext_resource type="Texture2D" uid="uid://c7msoucui78qr" path="res://Assets/Resources/Items/Icons/entity-enc.png" id="7_dv016"]
 [ext_resource type="Script" uid="uid://bvchqfumbckip" path="res://Scenes/UI/MENUOptions.gd" id="8_86um4"]
 [ext_resource type="FontFile" uid="uid://bxh0yf8gqhjgx" path="res://Fonts/SwanseaBoldItalic-p3Dv.ttf" id="8_i044a"]
@@ -19,7 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://cn3jnck0dqmko" path="res://Sounds/SFX/boodoowoop_reversed.wav" id="17_7783t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpqiu"]
-bg_color = Color(0, 0, 0, 0)
+bg_color = Color(0.156863, 0.156863, 0.156863, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rfdg"]
 content_margin_left = 15.0
@@ -42,32 +44,19 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t26fk"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dv016"]
-content_margin_left = 100.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo8ep"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bptmw"]
 content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
-bg_color = Color(0.136826, 0.136826, 0.136826, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhnji"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjtcy"]
 content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
+bg_color = Color(0.321728, 0.321728, 0.321728, 1)
 draw_center = false
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qat6l"]
 content_margin_left = 15.0
@@ -182,7 +171,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0)]
+"values": [Color(0.156863, 0.156863, 0.156863, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -234,7 +223,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+"values": [Color(0.156863, 0.156863, 0.156863, 1), Color(0, 0, 0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -286,7 +275,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.25, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.47451)]
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0.156863, 0.156863, 0.156863, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -350,8 +339,8 @@ anchors_preset = -1
 anchor_left = -0.738582
 anchor_right = -0.584736
 anchor_bottom = 1.0
-offset_left = 1229.0
-offset_right = 1229.0
+offset_left = 812.0
+offset_right = 812.0
 theme_override_constants/separation = 5
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -474,6 +463,166 @@ metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="StatusTab" type="Control" parent="Panel/MenuRegion"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Panel/MenuRegion/StatusTab"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.573318
+color = Color(0.122252, 0.122252, 0.122252, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="NameLabel" type="RichTextLabel" parent="Panel/MenuRegion/StatusTab"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.237981
+offset_left = -3.05176e-05
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 1, 1, 1)
+theme_override_constants/line_separation = -6
+theme_override_fonts/normal_font = ExtResource("6_86um4")
+theme_override_fonts/mono_font = ExtResource("6_86um4")
+theme_override_fonts/italics_font = ExtResource("5_dv016")
+theme_override_fonts/bold_italics_font = ExtResource("8_i044a")
+theme_override_fonts/bold_font = ExtResource("2_0fxxn")
+theme_override_font_sizes/bold_italics_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/mono_font_size = 50
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bptmw")
+bbcode_enabled = true
+text = "[b][font_size=75][wave][pulse freq=1 amp=0.5]Player Name[/pulse][/wave][/font_size][/b]
+
+[font_size=25][i]Username: Playername[/i][/font_size]"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Wallet" type="Control" parent="Panel/MenuRegion/StatusTab"]
+layout_mode = 1
+anchor_left = 0.817143
+anchor_top = -0.0901449
+anchor_right = 1.05857
+anchor_bottom = 0.24399
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Cover" type="ColorRect" parent="Panel/MenuRegion/StatusTab/Wallet"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 164.0
+offset_right = 238.0
+offset_bottom = 278.0
+mouse_filter = 2
+color = Color(0.156863, 0.156863, 0.156863, 1)
+metadata/_edit_lock_ = true
+
+[node name="CashSprite" type="TextureRect" parent="Panel/MenuRegion/StatusTab/Wallet"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = 271.006
+offset_right = 110.0
+offset_bottom = 271.006
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.66542
+scale = Vector2(0.495, 0.495)
+mouse_filter = 2
+texture = ExtResource("6_bdck3")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="CashSprite2" type="TextureRect" parent="Panel/MenuRegion/StatusTab/Wallet"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 266.0
+offset_top = 108.006
+offset_right = 266.0
+offset_bottom = 108.007
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.73141
+scale = Vector2(0.495, 0.495)
+mouse_filter = 2
+texture = ExtResource("5_okuqr")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="CashSprite3" type="TextureRect" parent="Panel/MenuRegion/StatusTab/Wallet"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 244.0
+offset_top = 90.0065
+offset_right = 244.0
+offset_bottom = 90.0065
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.43684
+scale = Vector2(0.495, 0.495)
+mouse_filter = 2
+texture = ExtResource("5_okuqr")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="WalletSprite" type="TextureRect" parent="Panel/MenuRegion/StatusTab/Wallet"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.272189
+anchor_top = 0.00359713
+anchor_right = 0.0843999
+anchor_bottom = 0.410625
+offset_left = 209.0
+offset_top = 112.0
+offset_right = 209.0
+offset_bottom = 112.0
+mouse_filter = 2
+texture = ExtResource("7_bo8ep")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="BalanceLabel" type="Label" parent="Panel/MenuRegion/StatusTab/Wallet"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275148
+anchor_top = 0.496403
+anchor_right = 0.766272
+anchor_bottom = 0.71223
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_dv016")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_sjtcy")
+text = "$ 15.00"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Panel/MenuRegion/StatusTab/Wallet"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -481,25 +630,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
-[node name="Pfp" type="TextureRect" parent="Panel/MenuRegion/StatusTab"]
-self_modulate = Color(0, 0, 0, 1)
+[node name="ReferenceRect" type="ReferenceRect" parent="Panel/MenuRegion/StatusTab"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.04
-anchor_top = 0.0769231
-anchor_right = 0.36
-anchor_bottom = 0.615385
-offset_right = -3.05176e-05
-offset_bottom = -3.05176e-05
-texture = ExtResource("3_np2s5")
-expand_mode = 1
-stretch_mode = 5
-metadata/_edit_use_anchors_ = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.9998
+offset_top = 150.999
+offset_right = -1051.0
+offset_bottom = -329.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+border_width = 15.0
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="Panel/MenuRegion/StatusTab/Pfp"]
+[node name="ColorRect" type="ColorRect" parent="Panel/MenuRegion/StatusTab/ReferenceRect"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -507,67 +656,46 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.197937, 0.197937, 0.197937, 1)
+color = Color(0, 0.346443, 0.346443, 1)
 metadata/_edit_lock_ = true
 
-[node name="NameLabel" type="RichTextLabel" parent="Panel/MenuRegion/StatusTab"]
+[node name="Pfp" type="TextureRect" parent="Panel/MenuRegion/StatusTab/ReferenceRect"]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.36
-anchor_right = 1.0
-anchor_bottom = 0.230769
-offset_left = -3.05176e-05
+anchor_left = -0.0524691
+anchor_top = -0.0426136
+anchor_right = 1.10802
+anchor_bottom = 0.994318
 grow_horizontal = 2
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 18
-theme_override_fonts/normal_font = ExtResource("4_2lsfw")
-theme_override_fonts/bold_font = ExtResource("4_2lsfw")
-theme_override_font_sizes/bold_italics_font_size = 100
-theme_override_font_sizes/italics_font_size = 100
-theme_override_font_sizes/mono_font_size = 100
-theme_override_font_sizes/normal_font_size = 100
-theme_override_font_sizes/bold_font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dv016")
-bbcode_enabled = true
-text = "[wave][pulse freq=1 amp=0.5]CARL[/pulse][/wave]"
-vertical_alignment = 1
+grow_vertical = 2
+texture = ExtResource("3_np2s5")
+expand_mode = 1
+stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="Panel/MenuRegion/StatusTab"]
+[node name="GridContainer" type="GridContainer" parent="Panel/MenuRegion/StatusTab"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.388572
-anchor_top = 0.230769
-anchor_right = 0.542857
-anchor_bottom = 0.384615
+anchor_left = 0.274286
+anchor_top = 0.174278
+anchor_right = 0.975715
+anchor_bottom = 0.957933
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="BalanceLabel" type="Label" parent="Panel/MenuRegion/StatusTab/GridContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_0fxxn")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_bo8ep")
-text = "BALANCE:"
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_sjtcy")
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="BalanceLabel" type="Label" parent="Panel/MenuRegion/StatusTab"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.542857
-anchor_top = 0.230769
-anchor_right = 0.954286
-anchor_bottom = 0.384616
-theme_override_colors/font_color = Color(0, 0.596512, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.596078, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("5_dv016")
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_fhnji")
-text = "$ 15.00"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
+[node name="ItemList" type="ItemList" parent="Panel/MenuRegion/StatusTab/GridContainer"]
+layout_mode = 2
 
 [node name="ItemTab" type="Control" parent="Panel/MenuRegion"]
 visible = false

@@ -1,0 +1,723 @@
+[gd_scene load_steps=28 format=3 uid="uid://bdd6cho8ub8cv"]
+
+[ext_resource type="Script" uid="uid://bfrexn5lfhcmv" path="res://Scenes/UI/MiniGameUI.gd" id="1_fhh0n"]
+[ext_resource type="FontFile" uid="uid://b886puej5lvph" path="res://Fonts/SwanseaBold-D0ox.ttf" id="2_ep20d"]
+[ext_resource type="FontFile" uid="uid://b4fhcqy8xh8sw" path="res://Fonts/SwanseaItalic-AwqD.ttf" id="3_545ku"]
+[ext_resource type="Script" uid="uid://b5afk3tgbvjr7" path="res://Scenes/Tools/Stopwatch.gd" id="4_5lto1"]
+[ext_resource type="FontFile" uid="uid://bxh0yf8gqhjgx" path="res://Fonts/SwanseaBoldItalic-p3Dv.ttf" id="5_72upk"]
+[ext_resource type="FontFile" uid="uid://fkjry0jqs6no" path="res://Fonts/Swansea-q3pd.ttf" id="6_2g0a5"]
+[ext_resource type="Texture2D" uid="uid://chwrv5ffkysfj" path="res://Assets/Resources/Items/Icons/rock.png" id="7_5lto1"]
+[ext_resource type="Script" uid="uid://r774rkuxrmf0" path="res://Scenes/GameFiles/RPSGame.gd" id="7_72upk"]
+[ext_resource type="Texture2D" uid="uid://debyb2w2stkow" path="res://Assets/Resources/Items/Icons/piece_of_paper.png" id="8_72upk"]
+[ext_resource type="Texture2D" uid="uid://cep3gpii7jexs" path="res://Assets/Resources/Items/Icons/scissors-open.png" id="9_2g0a5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bm6u"]
+content_margin_left = 25.0
+draw_center = false
+
+[sub_resource type="Animation" id="Animation_8csjr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaringContest/TopBanner:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaringContest/CountdownLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaringContest/TopBanner:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["INITIATING STARING CONTEST..."]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StaringContest/CountdownLabel:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["3"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StaringContest/CountdownLabel:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(566, 384)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StaringContest/CountdownLabel:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("StaringContest/StopwatchTime:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("StaringContest/Popup:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("StaringContest:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_pqjvw"]
+resource_name = "begin"
+length = 5.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaringContest/TopBanner:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaringContest/CountdownLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaringContest/TopBanner:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["INITIATING STARING CONTEST", "INITIATING STARING CONTEST", "INITIATING STARING CONTEST.", "INITIATING STARING CONTEST..", "INITIATING STARING CONTEST...", "INITIATING STARING CONTEST", "INITIATING STARING CONTEST.", "INITIATING STARING CONTEST..", "INITIATING STARING CONTEST..."]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StaringContest/CountdownLabel:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StaringContest/CountdownLabel:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(566, 384)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StaringContest/StopwatchTime:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("StaringContest/Popup:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("StaringContest:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8qai1"]
+resource_name = "countdown"
+length = 4.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaringContest/TopBanner:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StaringContest/CountdownLabel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StaringContest/TopBanner:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StaringContest/CountdownLabel:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["3", "2", "1", "BEGIN!"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("StaringContest/CountdownLabel:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(566, 384)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("StaringContest/CountdownLabel:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(2, 2), Vector2(0, 0), Vector2(2, 2), Vector2(0, 0), Vector2(2, 2)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("StaringContest/StopwatchTime:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("StaringContest/Popup:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("StaringContest:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uhkxt"]
+resource_name = "staring contest"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaringContest/StopwatchTime:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaringContest/TopBanner:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaringContest/CountdownLabel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StaringContest/Popup:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StaringContest:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xlslu"]
+_data = {
+&"RESET": SubResource("Animation_8csjr"),
+&"begin": SubResource("Animation_pqjvw"),
+&"countdown": SubResource("Animation_8qai1"),
+&"staring contest": SubResource("Animation_uhkxt")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8csjr"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8qai1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xceax"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.270222, 0.270222, 0.270222, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3b650"]
+bg_color = Color(0.560955, 0.560955, 0.560955, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q2ef"]
+bg_color = Color(1, 1, 1, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeaxc"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 0.52549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nok80"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g0a5"]
+bg_color = Color(0.0646965, 0.0646965, 0.0646965, 0.486275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy6gs"]
+bg_color = Color(1, 1, 1, 0.568627)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vl151"]
+bg_color = Color(0.393085, 0.393086, 0.393085, 0.486275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23fwi"]
+bg_color = Color(0, 0, 0, 0.298039)
+
+[node name="MiniGameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fhh0n")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Stopwatch" type="Node" parent="."]
+script = ExtResource("4_5lto1")
+metadata/_custom_type_script = "uid://b5afk3tgbvjr7"
+
+[node name="StaringContest" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="TopBanner" type="Label" parent="StaringContest"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0333333
+anchor_top = 0.0592593
+anchor_right = 0.966667
+anchor_bottom = 0.177778
+offset_right = 0.00012207
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ep20d")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_4bm6u")
+text = "INITIATING STARING CONTEST..."
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+visible_characters_behavior = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CountdownLabel" type="Label" parent="StaringContest"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.294792
+anchor_top = 0.355556
+anchor_right = 0.705208
+anchor_bottom = 0.711111
+offset_left = -0.000610352
+offset_top = -0.000488281
+offset_right = -0.000610352
+offset_bottom = -0.000488281
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(394, 192)
+theme_override_fonts/font = ExtResource("2_ep20d")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_4bm6u")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="StopwatchTime" type="Label" parent="StaringContest"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.888889
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_545ku")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_4bm6u")
+text = "00:00:00"
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="StaringContestAnimator" type="AnimationPlayer" parent="StaringContest"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_xlslu")
+}
+
+[node name="Popup" type="Panel" parent="StaringContest"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.888889
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8csjr")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="StaringContest/Popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="StaringContest/Popup/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_72upk")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8qai1")
+text = "GIVE UP?"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Yes" type="Button" parent="StaringContest/Popup/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("6_2g0a5")
+theme_override_font_sizes/font_size = 25
+text = "YES"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="No" type="Button" parent="StaringContest/Popup/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("6_2g0a5")
+theme_override_font_sizes/font_size = 25
+text = "NO"
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="RPS" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_72upk")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Options" type="ItemList" parent="RPS"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333333
+anchor_top = 0.837037
+anchor_right = 0.666667
+anchor_bottom = 1.0
+focus_mode = 0
+theme_override_constants/v_separation = 65
+theme_override_constants/h_separation = 25
+theme_override_styles/panel = SubResource("StyleBoxFlat_xceax")
+theme_override_styles/hovered = SubResource("StyleBoxFlat_3b650")
+theme_override_styles/hovered_selected = SubResource("StyleBoxFlat_7q2ef")
+theme_override_styles/hovered_selected_focus = SubResource("StyleBoxFlat_7q2ef")
+theme_override_styles/selected = SubResource("StyleBoxFlat_7q2ef")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_7q2ef")
+theme_override_styles/cursor_unfocused = SubResource("StyleBoxFlat_xeaxc")
+theme_override_styles/cursor = SubResource("StyleBoxFlat_nok80")
+allow_search = false
+item_count = 3
+max_columns = 3
+icon_mode = 0
+fixed_icon_size = Vector2i(183, 100)
+item_0/icon = ExtResource("7_5lto1")
+item_1/icon = ExtResource("8_72upk")
+item_2/icon = ExtResource("9_2g0a5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Chess" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ExitButton" type="Button" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.888889
+anchor_right = 0.0791667
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_2g0a5")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_2g0a5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_2g0a5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2g0a5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_xy6gs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_xy6gs")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_vl151")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vl151")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_xy6gs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xy6gs")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_23fwi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_23fwi")
+text = "EXIT"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mini_game_started" from="." to="." method="_on_mini_game_started"]
+[connection signal="round_ended" from="RPS" to="RPS" method="_on_round_ended"]
+[connection signal="round_won" from="RPS" to="RPS" method="_on_round_won"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_pressed"]

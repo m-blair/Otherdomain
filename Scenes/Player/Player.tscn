@@ -13,13 +13,13 @@ height = 1.4293
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 collision_layer = 3
-collision_mask = 13
+collision_mask = 12
 wall_min_slide_angle = 0.0
 floor_stop_on_slope = false
 floor_constant_speed = true
 floor_max_angle = 3.14159
-floor_snap_length = 0.0
 platform_floor_layers = 8
+safe_margin = 0.1
 script = ExtResource("1_s0eop")
 
 [node name="PlayerData" type="Node" parent="."]
@@ -57,3 +57,8 @@ hit_from_inside = true
 collide_with_areas = true
 
 [node name="GroundLevel" type="Marker3D" parent="."]
+
+[node name="test mesh" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00460815, 0.710501, -0.000427246)
+visible = false
+size = Vector3(0.426331, 1.1792, 0.484497)

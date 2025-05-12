@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody3D
 
+
+
 #var SPEED = 5
 const JUMP_VELOCITY := 4.5
 var mouse_sensitivity := 0.25
@@ -42,12 +44,12 @@ signal step
 
 func _ready() -> void:
 	moving = false
-	player_data.player = GameState.player
-	player_data._setup()
-	#print(player_data.dialogue_history)
 	camera_3d.fov = default_fov
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
+
+
+
+
 
 func _input(event: InputEvent) -> void:
 	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED: return
@@ -82,9 +84,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y  -= gravity * delta
 		
 	if Input.is_action_pressed("sprint"):
-		current_speed = sprint_speed
+		current_speed = sprint_speed * scale.x
 	else:
-		current_speed = walk_speed
+		current_speed = walk_speed * scale.x
 	
 	var input_dir = Input.get_vector("strafe left", "strafe right", "move forward", "move backward")
 	var dir = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

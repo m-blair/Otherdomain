@@ -1,7 +1,7 @@
 class_name PlayerData
 extends Node
 
-var player: Player
+#var player: Player
 
 @export var current_room: String
 @export var inventory: Inventory
@@ -29,8 +29,23 @@ func _setup() -> void:
 	for obj in objects:
 		if obj not in dialogue_history.keys():
 			dialogue_history[obj] = {"met": false, "lines_used": []}
+	
+	
 
 
+func has_item(item: Variant) -> bool:
+	if item is Item:
+		return true if inventory.items.has(item) else false
+	elif item is String:
+		return true if search_item_by_name(item) else false
+	return false
+
+
+func search_item_by_name(item_name: String) -> bool:
+	var names = []
+	for i in inventory.items:
+		names.append(i.name)
+	return true if names.has(item_name) else false
 
 
 func set_entity_met(entity_name: String) -> void:

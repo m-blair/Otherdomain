@@ -29,3 +29,5 @@ func _on_show_popup(key: String, text: String, flags = []) -> void:
 func _on_hide_popup() -> void:
 	action_text.text = ""
 	action_animator.play_backwards("show")
+	await action_animator.animation_finished
+	open = false

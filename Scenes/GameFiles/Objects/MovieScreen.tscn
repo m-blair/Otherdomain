@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=4 uid="uid://fx06vjlak4m1"]
+
+[ext_resource type="Script" uid="uid://sktk60q14tga" path="res://Scenes/GameFiles/Objects/MovieScreen.gd" id="1_ucgfb"]
+[ext_resource type="Texture2D" uid="uid://dxvbt8imvaw1v" path="res://Assets/Textures/1.png" id="2_3pu58"]
+[ext_resource type="AudioStream" uid="uid://cjx8yce3hd682" path="res://Sounds/SFX/sfx-library.mp3" id="3_3pu58"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ky6s"]
+emission_enabled = true
+refraction_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ofcgr"]
+_surfaces = [{
+"aabb": AABB(-1, -0.05, -1, 2, 0.05, 2),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAP8zMTL0AAIA/AACAvwAAAAAAAIC/AACAv8zMTL0AAIA/AACAv8zMTL0AAIC/AACAP8zMTL0AAIC/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kov8j"]
+resource_name = "theater_Plane"
+_surfaces = [{
+"aabb": AABB(-1, -0.05, -1, 2, 0.05, 2),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AAAAAAAAAAAAAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_6ky6s"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAv8zMTL0AAIA/AACAP8zMTL0AAIC/AACAv8zMTL0AAIC/AACAP8zMTL0AAIA/AACAvwAAAAAAAIA/AACAv8zMTL0AAIC/AACAvwAAAAAAAIC/AACAv8zMTL0AAIA/AACAPwAAAAAAAIA/AACAv8zMTL0AAIA/AACAvwAAAAAAAIA/AACAP8zMTL0AAIA/AACAPwAAAAAAAIC/AACAP8zMTL0AAIA/AACAPwAAAAAAAIA/AACAP8zMTL0AAIC/AACAvwAAAAAAAIC/AACAP8zMTL0AAIC/AACAPwAAAAAAAIC/AACAv8zMTL0AAIC//3///////7//f///////v/9///////+//3///////7//fwAA////P/9/AAD///8//38AAP///z//fwAA////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z////9/////v////3////+/////f////7////9/////v/////////+//////////7//////////v/////////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ofcgr")
+
+[node name="MovieScreen" type="Node3D"]
+script = ExtResource("1_ucgfb")
+current_film = 3
+metadata/_custom_type_script = "uid://3bd2uvwvsmek"
+
+[node name="screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0, 15.8767, 0, 0, 0)
+mesh = SubResource("ArrayMesh_kov8j")
+skeleton = NodePath("")
+
+[node name="Picture" type="Sprite3D" parent="."]
+transform = Transform3D(-9.83506e-08, 0, 2.25, 0, 2.25, 0, -2.25, 0, -9.83506e-08, 0.05, 0, -2.18557e-09)
+texture = ExtResource("2_3pu58")
+
+[node name="FilmAnimator" type="AnimationPlayer" parent="."]
+
+[node name="ScreenLight" type="SpotLight3D" parent="."]
+transform = Transform3D(3.55271e-15, 1.03316e-07, -1, 0, -1, -7.35137e-08, -1, 3.55271e-15, -3.55271e-15, 1.29904, -0.75, -4.68992e-14)
+light_color = Color(0.522692, 0.702867, 0.998861, 1)
+spot_range = 18.46
+spot_angle = 78.75
+spot_angle_attenuation = 0.466518
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Sfx-library" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_3pu58")
+volume_db = -10.0
+bus = &"SFX"

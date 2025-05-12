@@ -45,8 +45,9 @@ class_name MENU extends HUDElement
 @onready var boodoowoop_reversed: AudioStreamPlayer = $BoodoowoopReversed
 
 
-@onready var balance_label: Label = $Panel/MenuRegion/StatusTab/BalanceLabel
+@onready var balance_label: Label = $Panel/MenuRegion/StatusTab/Wallet/BalanceLabel
 @onready var name_label: RichTextLabel = $Panel/MenuRegion/StatusTab/NameLabel
+
 
 
 
@@ -142,6 +143,7 @@ func connect_tab_menu() -> void:
 		var button: Button = tabs.get_child(i)
 		button.toggled.connect(_on_tab_selected.bind(i))
 
+
 func toggle_off_others(id: int) -> void:
 	var i := 0
 	for t in tabs.get_children():
@@ -155,18 +157,13 @@ func reset_tabs() -> void:
 	for t in tabs.get_children():
 		if t is Button and t.button_pressed:
 			t.set_pressed_no_signal(false)
-	
 	for control in menu_region.get_children():
 		if control.visible:
 			control.hide()
 
 
-
 func get_item_text_color(item: Item) -> Color:
 	return Global.ITEM_TYPE_COLORS[item.type] if item.type in Global.ITEM_TYPE_COLORS.keys() else Color.WHITE
-	
-
-
 
 
 func fill_item_details_box(item: Item) -> void:
@@ -177,6 +174,7 @@ func fill_item_details_box(item: Item) -> void:
 	item_type.set_text("TYPE: %s" % item.ItemType.keys()[item.type])
 	#read_file.show() if item.type == Item.ItemType.FILE else read_file.hide()
 	item_details_box.show()
+
 
 func clear_item_details_box() -> void:
 	item_icon.texture = null
@@ -198,7 +196,6 @@ func get_tab_name(id: int) -> String:
 	return tabs.get_child(id).name
 
 
-
 func _on_tab_selected(toggled_on: bool, index: int) -> void:
 	if current_tab != index:
 		if toggled_on:
@@ -218,12 +215,8 @@ func _on_tab_selected(toggled_on: bool, index: int) -> void:
 		menu_region.hide()
 
 
-
-
 func get_item(id: int):
 	return player.player_data.inventory.get_item_at_index(id)
-
-
 
 
 func _on_close_pressed() -> void:
@@ -232,20 +225,10 @@ func _on_close_pressed() -> void:
 	_close()
 
 
-
-
-
-
-
-
 func _on_item_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
 	var selection: Item = get_item(index)
 	var button: int = mouse_button_index
-	
-	
 	if SELECTED_ITEM != null and selection != SELECTED_ITEM:
-		
-		
 		if COMBINING and FIRST_ITEM:
 			if selection is PartialItem:
 				if player.player_data.inventory.combine_items(FIRST_ITEM, selection):
@@ -262,6 +245,7 @@ func _on_item_list_item_clicked(index: int, at_position: Vector2, mouse_button_i
 			combine.disabled = true
 			clear_item_details_box()
 			print("---%s" % selection.name)
+			
 		else:
 			decide.play()
 			SELECTED_ITEM = selection

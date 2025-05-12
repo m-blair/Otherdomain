@@ -10,43 +10,56 @@ enum InteractionType {ENTITY, OBJECT}
 ## room construction / changing
 ## game-to-HUD signal connections
 
-var player: Player
+var player: Player # reference
 #var TEST_INVENTORY = preload("res://Assets/Resources/TestInventory.tres") as Inventory
 var PAPERCLIP = preload("res://Assets/Resources/Items/Paperclip.tres") as PartialItem
 var ENTITY_ENCYCLOPEDIA = preload("res://Assets/Resources/Items/Entity-Encyclopedia.tres")
 
 signal room_change(room_id: StringName, next_door_id: int)
 signal room_loaded
-signal balance_changed(new_bal: float)
+signal balance_changed(amount: float, new_balance: float)
 
 
 func _ready() -> void:
 	Global.game = self
+	var new_player: Player = Player.new()
+	new_player.player_data = PlayerData.new()
+	new_player.player_data._setup()
+	new_player.player_data.inventory = Inventory.new()
+	new_player.player_data.current_room = &"Hub"
+	new_player.player_data.balance = 0.00
+	
+	
+	GameState.player = new_player
+	
+	player = new_player
 	if get_tree().get_first_node_in_group("Player"):
-		GameState.player = get_tree().get_first_node_in_group("Player")
-		player = GameState.player
+		player = get_tree().get_first_node_in_group("Player")
 	#player = GameState.player
-	var inv: Inventory = Inventory.new()
-	inv.add_item(PAPERCLIP)
-	inv.add_item(ENTITY_ENCYCLOPEDIA)
-	player.player_data.inventory = inv
-	player.player_data.balance = 15.0
+	#var inv: Inventory = Inventory.new()
+	#inv.add_item(PAPERCLIP)
+	#inv.add_item(ENTITY_ENCYCLOPEDIA)
+	#GameState.player.player_data.inventory = inv
+	#player.player_data.inventory = inv
+	#player.player_data.balance = 15.0
+	#GameState.player.player_data.balance = 15.0
 	setup_room()
 	add_child(hud)
 	connect_global_signals()
-	hud.menu.player = player
+	hud.menu.player = GameState.player
 	hud.menu.load_inventory()
 	hud.crosshair.type = hud.crosshair.CrosshairType.CROSS
 	
 
 func setup_room() -> void:
 	current_room = get_child(0) as Room
-	player.player_data.current_room = current_room.room_id
+	#GameState.player_data.current_room = current_room.room_id
+	#player.player_data.current_room = current_room.room_id
 	for node in current_room.get_children():
 		if node is ItemDrop:
 			node.fill_item_data(node.item)
-
-
+		#if node is Door:
+			#node.
 
 
 func connect_global_signals() -> void:
@@ -61,7 +74,7 @@ func connect_global_signals() -> void:
 	hud.name_text_box.hide_text_box.connect(hud.name_text_box.hide_name)
 	Signals.exited_room.connect(_on_room_left)
 	Signals.entered_room.connect(_on_room_entered)
-	balance_changed.emit(_on_balance_changed)
+	balance_changed.connect(_on_balance_changed)
 
 
 func interact_with_object(object: InteractiveObject3D) -> void:
@@ -92,9 +105,9 @@ func interact_with_object(object: InteractiveObject3D) -> void:
 		print(["Locked: %s" % str(object.locked)])
 		var door: Door = object
 		if door.locked:
-			## show locked text on first try, 
+			## show locked text on first enter try 
 			if not door.lock_hint_seen:
-				hud.control_popup.show_control_popup.emit("E", "INTERACT", [door.locked_hint])
+				hud.control_popup.show_control_popup.emit("E", "ENTER", [door.locked_hint])
 				door.lock_hint_seen = true
 			
 		elif door.open:
@@ -105,17 +118,29 @@ func interact_with_object(object: InteractiveObject3D) -> void:
 			await hud.hud_effects.effect_finished
 			Signals.exited_room.emit(door.next_room_id, door.next_door_id)
 			
+			
 	elif object is ItemDrop:
 		print("item pickup request")
-		hud.control_popup.show_control_popup.emit("E", "PICK UP")
 		hud.item_pickup_request.emit(object)
-		
-		if object.item is OtherItem and object.item.value > 0.00:
-			balance_changed.emit(GameState.player.player_data.balance)
-		
-		#if not hud.item_pickup_request.is_connected(hud._on_item_pickup_request):
-			#hud.item_pickup_request.connect(hud._on_item_pickup_request.bind(object))
+		handle_item_drop(object as ItemDrop)
 
+
+func handle_item_drop(item_drop: ItemDrop) -> void:
+	
+	var item: Item = item_drop.item
+	
+	if item is OtherItem and item.name == "Cash":
+		var new_bal = GameState.player.player_data.balance + item.value
+		GameState.player.player_data.balance = new_bal
+		balance_changed.emit(item.value, new_bal)
+		
+	elif item is File:
+		hud.menu.doc_reader_open_request.emit(item)
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		await hud.doc_reader.closed
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
+	
 
 
 func _on_entity_found(entity: Entity) -> void:
@@ -187,11 +212,18 @@ func _on_player_interacted(collider) -> void:
 
 func _on_room_left(next_room_id: StringName, next_door_id: int) -> void:
 	print("room change...")
+	if current_room:
+		if not current_room.doors.is_empty():
+			current_room.doors[0].close_sfx.play()
 	room_change.emit(next_room_id, next_door_id)
 
 
 func _on_room_entered(next_door_id: int) -> void:
-	player = GameState.player
+	if current_room:
+		if not current_room.doors.is_empty():
+			player = current_room.player
+			current_room.doors[0].close_sfx.play()
+	
 	print(player.interaction_manager.interacted.is_connected(_on_player_interacted))
 	if not player.interaction_manager.interacted.is_connected(_on_player_interacted):
 		print("reconnecting signal")
@@ -213,13 +245,17 @@ func _on_object_left(object) -> void:
 
 
 func _on_object_found(object) -> void:
+
 	if object is ItemDrop:
 		hud.name_text_box.show_text_box.emit(object)
 		hud.control_popup.show_control_popup.emit("E", "PICK UP")
+	elif object is Door:
+		print(object.name)
+		hud.control_popup.show_control_popup.emit("E", "ENTER")
 	else:
 		print(object.name)
 		hud.control_popup.show_control_popup.emit("E", "INTERACT")
-		
+
 
 
 func _on_vending_machine_ui_exited(vending_machine: VendingMachine) -> void:
@@ -233,6 +269,7 @@ func _on_vending_machine_ui_exited(vending_machine: VendingMachine) -> void:
 	print("exited VM")
 
 
-func _on_balance_changed(new_bal: float) -> void:
+func _on_balance_changed(amount_added: float, new_bal: float) -> void:
 	print("player balance changed")
 	hud.menu.update_player_data(new_bal)
+	hud.hud_effects.flash_cash_text.emit(amount_added)

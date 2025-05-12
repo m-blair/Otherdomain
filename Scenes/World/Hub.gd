@@ -6,4 +6,5 @@ extends Room
 func _ready() -> void:
 	otherdomain_sign.color_shifting = true
 	await get_tree().create_timer(3).timeout
-	player_count_label.text = "PLAYERS ONLINE:            1"
+	player_count_label.text = "HUMANS ONLINE:            1"
+	

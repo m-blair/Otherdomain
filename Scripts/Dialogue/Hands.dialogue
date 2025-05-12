@@ -1,48 +1,29 @@
-
-~ GAME
-Hans: SHOOT!
-
-=> END
-
 ~ INTRODUCTION
-???: おはようございます。
-???: え―？　日本語が話せないようだ。
-???: あのうー　H-He- lloooo there stranger
-- Hello there
-	???: My name is [color=lime][b]Hans[/b][/color]. And yes, I'm aware that I am a sentient, floating pair of hands.
-	=> ROCK_PAPER_SCISSORS
-- ...
-	???: 何？　バカじゃないか―
+???: Who's this?
+set set_entity_met("Hans")
+Hans: Nice to meet you, my name is [color=lime]Hans[/color].
+Hans: I haven't seen a player online in ages... what brings you here?
+
 => END
 
 
-#~ next_move
-#match roll_dice(3):
-#	when 0:
-#		Hans: Wow that was
-			
 
-
-~ ROCK_PAPER_SCISSORS
-Hans: Care for a round or two of 'Rock, Paper, Scissors'?
-- Sure
-	Hans: ナイス！ Ok, On the count of three then-
-	=> GAME
-- No
-	Hans: Suit yourself, I'll be around if you change your mind...
-	=> BYE
+~ LOSS
+% Hans: Damn, maybe next time.
+%2 Hans: Heh- well I'll be damned...
+% Hans: I lose.
+% Hans: It's no use.
 => END
 
 
-~ RESULT_LOSS
-Hans: クソー you're pretty good at this...
+~ WIN
+% Hans: Haha, that's right.
+% Hans: 
 => END
+
 
 
 ~ BYE
-#if not 
-%2 ???: またねー
-%2 ???: Bye Bye
+
+
 => END
-
-
