@@ -33,10 +33,10 @@ OTHERDOMAIN is a surreal, dream-like, exploration game centered around navigatin
 
 ![Figure B - Room 1A](External/screenshot1a.png)
 
-![Figure C - Vending Machine](External/Screenshot2a.png)
+![Figure C - Vending Machine](External/screenshot2a.png)
 
-![Figure D - Entity](External/Screenshot4.jpg)
+![Figure D - Entity](External/screenshot4.png)
 
-![Figure E - Inventory View](External/Screenshot5.jpg)
+![Figure E - Inventory View](External/screenshot5.png)
 
-![Figure F](res://External/Screenshot6.jpg)
+![Figure F](External/Screenshot6.png)
