@@ -39,4 +39,4 @@ OTHERDOMAIN is a surreal, dream-like, exploration game centered around navigatin
 
 ![Figure E - Inventory View](External/screenshot5.png)
 
-![Figure F](External/Screenshot6.png)
+![Figure F](External/screenshot6.png)
