@@ -1,4 +1,5 @@
 
+
 # OTHERDOMAIN
 
 
@@ -29,7 +30,7 @@ OTHERDOMAIN is a surreal, dream-like, exploration game centered around navigatin
 	- Puzzle system
 
 ***
-## SCREENSHOTS
+## Screenshots
 
 ![Figure B - Room 1A](External/screenshot1a.png)
 
@@ -37,6 +38,21 @@ OTHERDOMAIN is a surreal, dream-like, exploration game centered around navigatin
 
 ![Figure D - Entity](External/screenshot4.png)
 
-![Figure E - Inventory View](External/screenshot5.png)
+![Figure E - Watcher](External/screenshot5.png)
 
-![Figure F](External/screenshot6.png)
+![Figure F - Inventory View](External/screenshot6.png)
+
+![Figure G - Cinema](External/screenshot7.png)
+
+
+***
+## References/Licensing
+#### Godot Plugins
+- Dialogue Manager [source](https://github.com/nathanhoad/godot_dialogue_manager)
+- Icon Explorer [source](https://kenyoni-software.github.io/godot-addons/addons/icon_explorer/)
+
+#### Asset Libraries
+- Adobe Stock (graphics / backgrounds)
+- Font Awesome (icons)
+- Pixabay (audio / sfx)
+- Fontspace (fonts)

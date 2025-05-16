@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bw0uvsdnrrpng"]
+[gd_scene load_steps=32 format=4 uid="uid://bw0uvsdnrrpng"]
 
 [ext_resource type="Script" uid="uid://ltia18kxlnxj" path="res://Scenes/World/Theater.gd" id="1_7h633"]
 [ext_resource type="PackedScene" uid="uid://ctjjlikq7iniq" path="res://Scenes/World/Theater.tscn" id="2_dy3wb"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dfgeinid7eg8a" path="res://Assets/Models/movie-seat_Fabric_valvet_01_basecolor.jpg" id="4_iguy4"]
 [ext_resource type="PackedScene" uid="uid://iv10hax4y8ri" path="res://Scenes/GameFiles/Objects/SpawnPoint.tscn" id="5_7t441"]
 [ext_resource type="Texture2D" uid="uid://dyhu6ofyxuyyv" path="res://Assets/Models/movie-seat_Fabric_valvet_01_metallic-Fabric_valvet_01_roughness.png" id="5_fol2i"]
-[ext_resource type="Material" uid="uid://byawrkt6qsdbj" path="res://Assets/Materials/MovieTheaterCarpet.tres" id="5_iguy4"]
 [ext_resource type="Material" uid="uid://0romirfkxoq3" path="res://Assets/Materials/MovieTheaterWalls.tres" id="6_fol2i"]
 [ext_resource type="Texture2D" uid="uid://bhy7ybvahwkv6" path="res://Assets/Models/movie-seat_Fabric_valvet_01_normal.jpg" id="6_l5k0a"]
 [ext_resource type="Texture2D" uid="uid://gljiynw72ilw" path="res://Assets/Sprites/spill1.png" id="8_ylxw5"]
@@ -241,9 +240,6 @@ collision_mask = 30
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Theater/theater/Theater/entrance/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_fol2i")
-
-[node name="floor" parent="Theater/theater/Theater" index="3"]
-surface_material_override/0 = ExtResource("5_iguy4")
 
 [node name="walls" parent="Theater/theater/Theater" index="5"]
 material_override = ExtResource("6_fol2i")
@@ -1101,6 +1097,7 @@ open = true
 
 [node name="MovieScreen" parent="." instance=ExtResource("13_l5k0a")]
 transform = Transform3D(-0.245, 0, -3.6994e-08, 0, 0.26, 0, 3.6994e-08, 0, -0.245, 6.301, 4.607, -2.485)
+visible = false
 
 [node name="Picture" parent="MovieScreen" index="1"]
 transform = Transform3D(-7.25609e-08, 0, 1.345, 0, 1.345, 0, -1.66, 0, -5.87918e-08, 0.05, 0, -2.18557e-09)
