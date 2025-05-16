@@ -3,7 +3,7 @@
 # OTHERDOMAIN
 
 
-![Figure A - Hub](External/Screenshot3.png)
+![Figure A - Hub](Screenshot3.png)
 
 ## Overview
 You wake up in an unfamiliar place- alone. 
